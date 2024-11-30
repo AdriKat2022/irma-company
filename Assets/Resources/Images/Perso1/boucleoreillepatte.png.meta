@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boucleoreillepatte_0: -6108374257168641547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

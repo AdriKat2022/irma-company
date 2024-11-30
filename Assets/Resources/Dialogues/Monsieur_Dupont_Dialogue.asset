@@ -13,87 +13,96 @@ MonoBehaviour:
   m_Name: Monsieur_Dupont_Dialogue
   m_EditorClassIdentifier: 
   <DialogueWaves>k__BackingField:
-  - AudioFile: {fileID: 0}
-    Lines:
+  - Lines:
     - Text: Comment allez-vous aujourd'hui ?
       isPlayerTalking: 1
       NextLineDelay: 1
+      AudioFile: {fileID: 8300000, guid: 2bfea4d1d70feff4b893183f1f82c6b9, type: 3}
     - Text: "Oh, vous savez, il y a des hauts et des bas. Je me suis fait cambrioler
         la semaine derni\xE8re."
       isPlayerTalking: 0
       NextLineDelay: 2
-  - AudioFile: {fileID: 0}
-    Lines:
+      AudioFile: {fileID: 8300000, guid: e2714b40e37b0e14cbb77a406830e369, type: 3}
+  - Lines:
     - Text: "Oui, je vois\u2026 une perte, une absence qui p\xE8se lourd sur votre
         c\u0153ur."
       isPlayerTalking: 1
       NextLineDelay: 1
+      AudioFile: {fileID: 0}
     - Text: "Oui, j\u2019ai perdu Hachik\u014D, mon Shiba\u2026 Il a disparu ce jour-l\xE0.
         Pendant le vol, il a pris peur et a saut\xE9 par la fen\xEAtre."
       isPlayerTalking: 0
       NextLineDelay: 3
-  - AudioFile: {fileID: 0}
-    Lines:
+      AudioFile: {fileID: 0}
+  - Lines:
     - Text: "Oui, je vois\u2026 Hachik\u014D. Un \xEAtre fid\xE8le qui a pris son
         envol. Vous l\u2019aimiez profond\xE9ment, n\u2019est-ce pas ?"
       isPlayerTalking: 1
       NextLineDelay: 1
+      AudioFile: {fileID: 0}
     - Text: Plus que tout.
       isPlayerTalking: 0
       NextLineDelay: 1
-  - AudioFile: {fileID: 0}
-    Lines:
+      AudioFile: {fileID: 0}
+  - Lines:
     - Text: "Oui, je vois\u2026 mais son absence a r\xE9veill\xE9 en vous quelque
         chose de plus grand. Une envie qui sommeillait."
       isPlayerTalking: 1
       NextLineDelay: 2
+      AudioFile: {fileID: 0}
     - Text: Une envie ?
       isPlayerTalking: 0
       NextLineDelay: 1
-  - AudioFile: {fileID: 0}
-    Lines:
+      AudioFile: {fileID: 0}
+  - Lines:
     - Text: "Oui, je vois\u2026 un vent de changement, un appel \xE0 d\xE9couvrir
         quelque chose de nouveau, quelque chose que vous avez toujours gard\xE9 en
         vous sans oser."
       isPlayerTalking: 1
       NextLineDelay: 4
+      AudioFile: {fileID: 0}
     - Text: "C\u2019est vrai\u2026 Ces derniers jours, je ressens ce besoin de tout
         recommencer, de me prouver quelque chose."
       isPlayerTalking: 0
       NextLineDelay: 2
-  - AudioFile: {fileID: 0}
-    Lines:
+      AudioFile: {fileID: 0}
+  - Lines:
     - Text: "Oui, je vois\u2026 il y a cette envie de d\xE9fi, de d\xE9passement...
         Vous ressentez le besoin de vous affirmer, de trouver votre force int\xE9rieure."
       isPlayerTalking: 1
       NextLineDelay: 4
+      AudioFile: {fileID: 0}
     - Text: "C'est vrai surtout depuis que je me suis mis \xE0 l'air soft, j'ai envie
         de plus."
       isPlayerTalking: 0
       NextLineDelay: 2
-  - AudioFile: {fileID: 0}
-    Lines:
+      AudioFile: {fileID: 0}
+  - Lines:
     - Text: "Oui, je vois\u2026 l\u2019airsoft, un jeu, qui est plus qu\u2019un simple
         loisir pour vous. Une fa\xE7on de vous projeter, de vous entra\xEEner \xE0
         quelque chose de plus grand."
       isPlayerTalking: 1
       NextLineDelay: 4
+      AudioFile: {fileID: 0}
     - Text: "C\u2019est \xE7a\u2026 C\u2019est devenu comme un \xE9chappatoire, une
         mani\xE8re de me pr\xE9parer."
       isPlayerTalking: 0
       NextLineDelay: 2
-  - AudioFile: {fileID: 0}
-    Lines:
+      AudioFile: {fileID: 0}
+  - Lines:
     - Text: "Oui, je vois\u2026 une pr\xE9paration, une qu\xEAte de ma\xEEtrise,
         de discipline. Vous avez soif d\u2019un d\xE9fi r\xE9el, n\u2019est-ce pas
         ?"
       isPlayerTalking: 1
       NextLineDelay: 4
+      AudioFile: {fileID: 0}
     - Text: "Peut-\xEAtre\u2026 Je sens qu\u2019il me manque quelque chose, un vrai
         objectif. Pouvez vous m'aider ?"
       isPlayerTalking: 0
       NextLineDelay: 3
+      AudioFile: {fileID: 0}
     - Text: "Oui, je vois\u2026 Les r\xE9ponses sont souvent d\xE9j\xE0 l\xE0. Vous
         les connaissez. Mon r\xF4le est seulement de les r\xE9v\xE9ler..."
       isPlayerTalking: 0
       NextLineDelay: 3
+      AudioFile: {fileID: 0}
