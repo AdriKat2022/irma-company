@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Monsieur_Dupont_Intro
   m_EditorClassIdentifier: 
   <DialogueWaves>k__BackingField:
-  - AudioFile: {fileID: 0}
-    Lines:
+  - Lines:
     - Text: "Bonjour, enchant\xE9 !"
       isPlayerTalking: 0
-      NextLineDelay: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 8300000, guid: 3a26c6b20750292489da8164689feed6, type: 3}
