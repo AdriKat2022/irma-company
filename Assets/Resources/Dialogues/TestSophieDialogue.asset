@@ -16,16 +16,22 @@ MonoBehaviour:
   - AudioFile: {fileID: 0}
     Lines:
     - Text: Bonjour ceci est un test !
+      isPlayerTalking: 1
       NextLineDelay: 1
     - Text: "2\xE8me phrase !"
+      isPlayerTalking: 0
       NextLineDelay: 2
     - Text: "3\xE8me phrase !"
+      isPlayerTalking: 1
       NextLineDelay: 1
   - AudioFile: {fileID: 0}
     Lines:
     - Text: Wave 2 - phrase 1
+      isPlayerTalking: 0
       NextLineDelay: 1
     - Text: Wave 2 - phrase 2
+      isPlayerTalking: 1
       NextLineDelay: 0.5
     - Text: Wave 2 - phrase 3
-      NextLineDelay: 1
+      isPlayerTalking: 0
+      NextLineDelay: 5
