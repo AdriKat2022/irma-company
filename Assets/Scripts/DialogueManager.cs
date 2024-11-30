@@ -6,8 +6,12 @@ using System;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] private string playerName = "Player";
+
     [SerializeField] private CustomerData customerData;
     private Dialogue dialogue;
+
+    private bool isDialogueActive = false;
 
     private Queue<DialogueWave> dialogueWaves;
     private Queue<string> sentences;
@@ -19,7 +23,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator animator;
     void Start()
     {
-        dialogue = customerData.Dialogue;
         dialogueWaves = new Queue<DialogueWave>();
         sentences = new Queue<string>();
         isPlayerTalkings = new Queue<bool>();
@@ -34,14 +37,40 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(Action onDialogueComplete = null)
+ 
+    public void SetNewDialogue(Dialogue dialogue)
     {
-        animator.SetBool("isOpen", true);
-        characterNameText.text = customerData.Name;
+        this.dialogue = dialogue;
+
         dialogueWaves.Clear();
         sentences.Clear();
         nextLineDelays.Clear();
         isPlayerTalkings.Clear();
+    }
+
+    public void SetNewCustomer(CustomerData customerData)
+    {
+        this.customerData = customerData;
+        dialogue = customerData.Dialogue;
+        characterNameText.text = customerData.Name;
+
+        dialogueWaves.Clear();
+        sentences.Clear();
+        nextLineDelays.Clear();
+        isPlayerTalkings.Clear();
+    }
+
+    public void StartDialogue(Action onDialogueComplete = null)
+    {
+        if (isDialogueActive || dialogue == null)
+        {
+            Debug.LogError("Dialogue is already active or not set");
+            return;
+        }
+
+        isDialogueActive = true;
+
+        animator.SetBool("isOpen", true);
 
         foreach (DialogueWave dialogueWave in dialogue.DialogueWaves) 
         { 
@@ -52,6 +81,7 @@ public class DialogueManager : MonoBehaviour
                 isPlayerTalkings.Enqueue(dialogueLine.isPlayerTalking);
             }
         }
+
         StartCoroutine(OpenDialogue(onDialogueComplete));
     }
 
@@ -68,7 +98,7 @@ public class DialogueManager : MonoBehaviour
             string sentence = sentences.Dequeue();
             float nextLineDelay = nextLineDelays.Dequeue();
             bool isPlayerTalking = isPlayerTalkings.Dequeue();
-            if (isPlayerTalking) { characterNameText.text = "Player"; } else { characterNameText.text = customerData.Name; }
+            if (isPlayerTalking) { characterNameText.text = playerName; } else { characterNameText.text = customerData.Name; }
             StartCoroutine(TypeSentence(sentence, nextLineDelay, onDialogueComplete));
         }
         else 
@@ -95,6 +125,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueText.text = "";
         animator.SetBool("isOpen", false);
+        isDialogueActive = false;
         onDialogueComplete?.Invoke();
     }
 }
