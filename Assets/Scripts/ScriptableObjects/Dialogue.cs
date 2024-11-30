@@ -21,7 +21,7 @@ public struct DialogueLine
 [Serializable]
 public struct DialogueWave
 {
-    public string[] Lines;
+    public DialogueLine[] Lines;
     public AudioClip AudioFile;
 }
 
@@ -29,5 +29,5 @@ public struct DialogueWave
 public class Dialogue : ScriptableObject
 {
     [field: SerializeField]
-    public DialogueWave[] DialogueLines { get; private set; }
+    public DialogueWave[] DialogueWaves { get; private set; }
 }
