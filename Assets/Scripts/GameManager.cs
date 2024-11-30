@@ -1,23 +1,40 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private EncounterManager encounterManager;
 
+    [SerializeField] private CustomerData[] customerDataList;
+    [SerializeField] private GameObject[] customerList;
+
+    private int currentCaracterCount;
+    private int maxCaracterCount;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        encounterManager.StartEncounter();
+        maxCaracterCount = customerDataList.Length;
+        encounterManager.StartEncounter(customerDataList[0], customerList[0]);
+        currentCaracterCount++;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnEndEncounter()
     {
-        
+        if (customerDataList.Length < maxCaracterCount)
+        {
+            encounterManager.StartEncounter(customerDataList[currentCaracterCount], customerList[currentCaracterCount]);
+            currentCaracterCount++;
+        }   
+        else
+        {
+            EndGame();
+        }
     }
 
-    void OnEndEncounter()
+    private void EndGame()
     {
-        encounterManager.StartEncounter();
+        SceneManager.LoadScene(0);
     }
 }
