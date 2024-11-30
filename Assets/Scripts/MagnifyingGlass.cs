@@ -11,7 +11,7 @@ public class MagnifyingGlass: MonoBehaviour
     }
     void Start()
     {
-        Deactivate();
+        //Deactivate();
     }
 
     // Update is called once per frame
