@@ -13,6 +13,7 @@ public struct DialogueLine
     public string Text;
     public bool isPlayerTalking;
     public float NextLineDelay;
+    public AudioClip AudioFile;
 }
 
 /// <summary>
@@ -22,7 +23,6 @@ public struct DialogueLine
 [Serializable]
 public struct DialogueWave
 {
-    public AudioClip AudioFile;
     public DialogueLine[] Lines;
 }
 
