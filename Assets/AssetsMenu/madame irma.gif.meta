@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      madame irma_0: -2111104178410740266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
