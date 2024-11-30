@@ -8,6 +8,13 @@ public struct CardSlot
     public int CharacterScore;
 }
 
+[Serializable]
+public struct Question
+{
+    public string InitialSentence;
+    public CardSlot[] AvailableCards;
+}
+
 [CreateAssetMenu(fileName = "NewCustomerCharacter", menuName = "Customer Character")]
 public class CustomerData : ScriptableObject
 {
@@ -24,7 +31,5 @@ public class CustomerData : ScriptableObject
 
     [field: Header("Prediction")]
     [field: SerializeField]
-    public string InitialSentence { get; private set; }
-    [field: SerializeField]
-    public CardSlot[] CardSet { get; private set; }
+    public Question[] Questions { get; private set; }
 }
