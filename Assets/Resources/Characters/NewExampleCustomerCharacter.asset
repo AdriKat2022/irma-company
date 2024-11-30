@@ -14,14 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Spritz
   <CharacterSprite>k__BackingField: {fileID: 0}
-  <Dialogue>k__BackingField: {fileID: 0}
-  <InitialSentence>k__BackingField: Dans le futur vous serez...
-  <CardSet>k__BackingField:
-  - Content: "\xE9leveur de vache"
-    CharacterScore: 5
-  - Content: pompier
-    CharacterScore: 1
-  - Content: DJ
-    CharacterScore: 3
-  - Content: "biblioth\xE9caire"
-    CharacterScore: 0
+  <Username>k__BackingField: 
+  <ProfilePicture>k__BackingField: {fileID: 0}
+  <Dialogue>k__BackingField: {fileID: 11400000, guid: c82dbcbed9d5b734897f93dbfe81146b, type: 2}
+  <Questions>k__BackingField:
+  - InitialSentence: Plus tard, vous deviendrez...
+    AvailableCards:
+    - CharacterScore: 8
+      Content: "b\xFBcheron"
+    - CharacterScore: 5
+      Content: "biblioth\xE9caire"
+    - CharacterScore: 10
+      Content: batman
+  - InitialSentence: Vous serez...
+    AvailableCards:
+    - CharacterScore: 7
+      Content: riche
+    - CharacterScore: 9
+      Content: amoureux
+    - CharacterScore: 2
+      Content: "bourr\xE9"
+  <ReviewTresholds>k__BackingField:
+  - RequiredScore: 0
+    ReviewText: Nul af
+  - RequiredScore: 2
+    ReviewText: fuyez!!!!
+  - RequiredScore: 5
+    ReviewText: "elle m'a fait que me fixer pdt toute la session et en plus mon chat
+      est mort juste apr\xE8s"
+  - RequiredScore: 8
+    ReviewText: Je recommende !!
+  - RequiredScore: 9
+    ReviewText: Excellente voyante, allez la voir !
