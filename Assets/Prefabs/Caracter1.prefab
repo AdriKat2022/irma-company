@@ -124,7 +124,7 @@ SpriteRenderer:
   m_Size: {x: 17.73, y: 10.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &2431219227581414184
@@ -185,7 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a8920408274fd42a7e1278f917e37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseImage: {fileID: 6938254711374928252}
   image: {fileID: 5229124648798598828}
 --- !u!1 &3445350581691988817
 GameObject:
@@ -273,7 +272,7 @@ SpriteRenderer:
   m_Size: {x: 17.73, y: 10.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &8516410992642994980
@@ -334,7 +333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a8920408274fd42a7e1278f917e37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseImage: {fileID: 6938254711374928252}
   image: {fileID: 7003967041172624539}
 --- !u!1 &5229124648798598828
 GameObject:
@@ -420,7 +418,7 @@ SpriteRenderer:
   m_Size: {x: 5.62, y: 4.7000003}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6938254711374928252
@@ -507,7 +505,7 @@ SpriteRenderer:
   m_Size: {x: 11.58, y: 18.869999}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7003967041172624539
@@ -594,7 +592,7 @@ SpriteRenderer:
   m_Size: {x: 3.92, y: 4.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7355162507385006172
@@ -681,7 +679,7 @@ SpriteRenderer:
   m_Size: {x: 5.5, y: 4.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7918086172155369826
@@ -762,12 +760,12 @@ SpriteRenderer:
   m_SortingLayerID: 114684753
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7746679702265852604, guid: b295d2703084a52458d8b8ac37cbed02, type: 3}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.22, y: 4.69}
+  m_Size: {x: 10, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -809,10 +807,10 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 28.88, y: 18.76}
-    newSize: {x: 7.22, y: 4.69}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 10, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -831,5 +829,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a8920408274fd42a7e1278f917e37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseImage: {fileID: 6938254711374928252}
   image: {fileID: 7355162507385006172}
