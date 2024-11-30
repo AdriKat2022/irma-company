@@ -18,5 +18,17 @@ MonoBehaviour:
   <ProfilePicture>k__BackingField: {fileID: 0}
   <IntroDialogue>k__BackingField: {fileID: 11400000, guid: 6e79696f80004b043aa9220f06c80005, type: 2}
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 2d38b431765b254498f7e23fcf930ed2, type: 2}
-  <Questions>k__BackingField: []
-  <ReviewTresholds>k__BackingField: []
+  <Questions>k__BackingField:
+  - InitialSentence: Vous aller devenir...
+    AvailableCards:
+    - CharacterScore: 3
+      Content: un barman
+    - CharacterScore: 10
+      Content: un coach de gym
+    - CharacterScore: 0
+      Content: un gitan
+  <ReviewTresholds>k__BackingField:
+  - RequiredScore: 0
+    ReviewText: trop nul
+  - RequiredScore: 10
+    ReviewText: je recommande!!

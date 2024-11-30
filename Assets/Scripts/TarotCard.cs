@@ -37,6 +37,7 @@ public class TarotCard : MonoBehaviour
     public void InitiateCard(CardSlot cardData, Action callBack = null)
     {
         this.cardData = cardData;
+        cardText.text = cardData.Content;
         onClick = callBack;
     }
 
