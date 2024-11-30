@@ -42,5 +42,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Character
+    uniqueID: 4293202163
+    locked: 0
+  - name: Eyes
+    uniqueID: 114684753
+    locked: 0
+  - name: UI
+    uniqueID: 988267635
+    locked: 0
   m_RenderingLayers:
   - Default
