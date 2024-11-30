@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76beacedb660b1f47b37680517e1eb93, type: 3}
+  m_Name: NewExampleCustomerCharacter
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Spritz
+  <CharacterSprite>k__BackingField: {fileID: 0}
+  <Dialogue>k__BackingField: {fileID: 0}
+  <InitialSentence>k__BackingField: Dans le futur vous serez...
+  <CardSet>k__BackingField:
+  - Content: "\xE9leveur de vache"
+    CharacterScore: 5
+  - Content: pompier
+    CharacterScore: 1
+  - Content: DJ
+    CharacterScore: 3
+  - Content: "biblioth\xE9caire"
+    CharacterScore: 0
