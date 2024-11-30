@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -29,11 +30,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            StartDialogue();
+            StartDialogue(() => print("Dialogue ended")) ;
         }
     }
 
-    public void StartDialogue()
+    public void StartDialogue(Action onDialogueComplete = null)
     {
         animator.SetBool("isOpen", true);
         characterNameText.text = customerData.Name;
@@ -51,16 +52,16 @@ public class DialogueManager : MonoBehaviour
                 isPlayerTalkings.Enqueue(dialogueLine.isPlayerTalking);
             }
         }
-        StartCoroutine(OpenDialogue());
+        StartCoroutine(OpenDialogue(onDialogueComplete));
     }
 
-    IEnumerator OpenDialogue()
+    IEnumerator OpenDialogue(Action onDialogueComplete = null)
     {
         yield return new WaitForSeconds(2);
-        DisplayNextSentence();
+        DisplayNextSentence(onDialogueComplete);
     }
 
-    public void DisplayNextSentence()
+    public void DisplayNextSentence(Action onDialogueComplete = null)
     {
         if (sentences.Count > 0) 
         { 
@@ -68,16 +69,16 @@ public class DialogueManager : MonoBehaviour
             float nextLineDelay = nextLineDelays.Dequeue();
             bool isPlayerTalking = isPlayerTalkings.Dequeue();
             if (isPlayerTalking) { characterNameText.text = "Player"; } else { characterNameText.text = customerData.Name; }
-            StartCoroutine(TypeSentence(sentence, nextLineDelay));
+            StartCoroutine(TypeSentence(sentence, nextLineDelay, onDialogueComplete));
         }
         else 
         {
-            EndDialogue();
+            EndDialogue(onDialogueComplete);
             return;
         }
     }
 
-    IEnumerator TypeSentence(string sentence, float nextLineDelay)
+    IEnumerator TypeSentence(string sentence, float nextLineDelay, Action onDialogueComplete = null)
     {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
@@ -87,11 +88,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(nextLineDelay);
-        DisplayNextSentence();
+        DisplayNextSentence(onDialogueComplete);
     }
 
-    public void EndDialogue()
+    public void EndDialogue(Action onDialogueComplete = null)
     {
+        dialogueText.text = "";
         animator.SetBool("isOpen", false);
+        onDialogueComplete?.Invoke();
     }
 }
