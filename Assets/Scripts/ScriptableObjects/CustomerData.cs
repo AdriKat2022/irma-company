@@ -4,8 +4,9 @@ using UnityEngine;
 [Serializable]
 public struct CardSlot
 {
-    public string Content;
+    [Range(0, 10)]
     public int CharacterScore;
+    public string Content;
 }
 
 [Serializable]
