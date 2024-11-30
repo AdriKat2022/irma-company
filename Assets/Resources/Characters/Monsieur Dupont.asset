@@ -19,14 +19,29 @@ MonoBehaviour:
   <IntroDialogue>k__BackingField: {fileID: 11400000, guid: 6e79696f80004b043aa9220f06c80005, type: 2}
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 2d38b431765b254498f7e23fcf930ed2, type: 2}
   <Questions>k__BackingField:
+  - InitialSentence: "Je vois, je vois, je vois, vous allez \xE9lire r\xE9sidence..."
+    AvailableCards:
+    - CharacterScore: 3
+      Content: au Japon
+      ReviewLine: "Incroyable ce pays, ARIGAT\xD4 GOZAIMASU."
+    - CharacterScore: 10
+      Content: au Mexique
+      ReviewLine: "Les temples Maya sont superbes mais j'avoue que je me sens pas
+        en s\xE9curit\xE9 avec les cartels."
+    - CharacterScore: 0
+      Content: en Russie
+      ReviewLine: 
   - InitialSentence: Vous aller devenir...
     AvailableCards:
     - CharacterScore: 3
       Content: un barman
+      ReviewLine: 
     - CharacterScore: 10
       Content: un coach de gym
+      ReviewLine: 
     - CharacterScore: 0
       Content: un boulanger
+      ReviewLine: 
   <ReviewTresholds>k__BackingField:
   - RequiredScore: 0
     ReviewText: trop nul
