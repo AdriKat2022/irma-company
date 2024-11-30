@@ -57,6 +57,8 @@ public class EncounterManager : MonoBehaviour
 
     public void StartEncounter(CustomerData customerData, GameObject customer)
     {
+        print("Encounter started with " + customerData.ToString());
+
         this.customerData = customerData;
         this.customer = customer;
 
@@ -138,15 +140,18 @@ public class EncounterManager : MonoBehaviour
         dialogueManager.SetNewCustomer(customerData);
         dialogueManager.SetNewDialogue(customerData.IntroDialogue);
         dialogueManager.StartDialogue(() => StartCoroutine(OnIntroDialogueFinished()));
+        print("Launched intro dialogue");
     }
 
     private IEnumerator OnIntroDialogueFinished()
     {
+        print("The intro Dialogue finished");
         currentState = EncounterState.InDialogue;
         // TODO: Make the player able to inspect the customer
         yield return new WaitForSeconds(delayBeforeBackgroundDialogue);
         dialogueManager.SetNewDialogue(customerData.Dialogue);
         dialogueManager.StartDialogue(OnInDialogueFinished);
+        print("Launched background dialogue");
     }
 
     private void OnInDialogueFinished()
