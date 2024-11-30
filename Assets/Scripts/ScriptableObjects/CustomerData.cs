@@ -39,6 +39,8 @@ public class CustomerData : ScriptableObject
 
     [field: Header("Dialogue")]
     [field: SerializeField]
+    public Dialogue IntroDialogue { get; private set; }
+    [field: SerializeField]
     public Dialogue Dialogue { get; private set; }
 
     [field: Header("Prediction")]
