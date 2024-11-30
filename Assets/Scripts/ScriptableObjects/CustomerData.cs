@@ -9,7 +9,7 @@ public struct CardSlot
 }
 
 [CreateAssetMenu(fileName = "NewCustomerCharacter", menuName = "Customer Character")]
-public class CustomerCharacter : ScriptableObject
+public class CustomerData : ScriptableObject
 {
     [field: Header("Character Looks")]
     [field: SerializeField]
