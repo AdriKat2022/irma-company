@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class PauseMenu : MonoBehaviour
 
     private void UnlockInput()
     {
-        isInputLocked = false; 
+        isInputLocked = false;
     }
 
     public void Paused()
@@ -54,7 +55,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        
-       
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }
