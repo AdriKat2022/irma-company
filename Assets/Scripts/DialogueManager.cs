@@ -6,37 +6,41 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private CustomerData customerData;
+    private Dialogue dialogue;
 
     private Queue<DialogueWave> dialogueWaves;
     private Queue<string> sentences;
     private Queue<float> nextLineDelays;
+    private Queue<bool> isPlayerTalkings;
 
     [SerializeField] private TextMeshProUGUI characterNameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private Animator animator;
     void Start()
     {
-        Dialogue dialogue = customerData.Dialogue;
+        dialogue = customerData.Dialogue;
         dialogueWaves = new Queue<DialogueWave>();
         sentences = new Queue<string>();
+        isPlayerTalkings = new Queue<bool>();
         nextLineDelays = new Queue<float>();
-        StartDialogue(dialogue);
     }
 
     void Update()
     {
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log("space");
-            DisplayNextSentence();
+            StartDialogue();
         }
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue()
     {
+        animator.SetBool("isOpen", true);
         characterNameText.text = customerData.Name;
         dialogueWaves.Clear();
         sentences.Clear();
         nextLineDelays.Clear();
+        isPlayerTalkings.Clear();
 
         foreach (DialogueWave dialogueWave in dialogue.DialogueWaves) 
         { 
@@ -44,8 +48,16 @@ public class DialogueManager : MonoBehaviour
             {
                 sentences.Enqueue(dialogueLine.Text);
                 nextLineDelays.Enqueue(dialogueLine.NextLineDelay);
+                isPlayerTalkings.Enqueue(dialogueLine.isPlayerTalking);
             }
         }
+        StartCoroutine(OpenDialogue());
+    }
+
+    IEnumerator OpenDialogue()
+    {
+        yield return new WaitForSeconds(2);
+        DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
@@ -54,6 +66,8 @@ public class DialogueManager : MonoBehaviour
         { 
             string sentence = sentences.Dequeue();
             float nextLineDelay = nextLineDelays.Dequeue();
+            bool isPlayerTalking = isPlayerTalkings.Dequeue();
+            if (isPlayerTalking) { characterNameText.text = "Player"; } else { characterNameText.text = customerData.Name; }
             StartCoroutine(TypeSentence(sentence, nextLineDelay));
         }
         else 
@@ -78,6 +92,6 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        Debug.Log("Le dialogue est terminée");
+        animator.SetBool("isOpen", false);
     }
 }

@@ -11,6 +11,7 @@ using UnityEngine;
 public struct DialogueLine
 {
     public string Text;
+    public bool isPlayerTalking;
     public float NextLineDelay;
 }
 
