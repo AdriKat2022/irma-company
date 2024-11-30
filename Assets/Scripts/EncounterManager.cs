@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public enum EncounterState
@@ -11,56 +12,146 @@ public enum EncounterState
 
 public class EncounterManager : MonoBehaviour
 {
-    [SerializeField]
-    private DialogueManager dialogueManager;
-    [SerializeField]
-    private float delayBeforeDialogue = 1.5f;
+    [Header("Debug")]
     [SerializeField]
     private CustomerData customerData;
     [SerializeField]
     private GameObject customer;
 
+    [Header("Options")]
+    [SerializeField]
+    private float cardSpacing = 3f;
+    [SerializeField]
+    private float delayBeforeDialogue = 1.5f;
+    [SerializeField]
+    private float delayBeforeBackgroundDialogue = 1.5f;
+    [SerializeField]
+    private float delayBeforeReveal = 2f;
+
+    [Header("References")]
+    [SerializeField]
+    private DialogueManager dialogueManager;
+    [SerializeField]
+    private TextMeshProUGUI sentenceText;
+    [SerializeField]
+    private TarotCard tarotCardPrefab;
+    [SerializeField]
+    private GameObject confirmPopup;
+
+    private int currentQuestionIndex = 0;
+
     private EncounterState currentState = EncounterState.Intro;
+    private TarotCard[] tarotCards;
+
+    private void Start()
+    {
+        tarotCards = new TarotCard[3];
+        StartEncounter(customerData, customer);
+    }
 
     public void StartEncounter()
     {
         StartEncounter(customerData, customer);
     }
 
-    private void Start()
-    {
-        StartEncounter(customerData, customer);
-    }
 
-    private void StartEncounter(CustomerData customerData, GameObject customer)
+    public void StartEncounter(CustomerData customerData, GameObject customer)
     {
         this.customerData = customerData;
         this.customer = customer;
 
         currentState = EncounterState.Intro;
-        customer.SetActive(true);
 
         StartCoroutine(StartEncounterCoroutine());
     }
 
-    private IEnumerator StartEncounterCoroutine()
+    public void RequestDivinationPhase(bool isConfirmed)
     {
-        yield return new WaitForSeconds(delayBeforeDialogue);
-        dialogueManager.SetNewCustomer(customerData);
+        if (currentState != EncounterState.InDialogue) return;
+
+        confirmPopup.SetActive(true);
+
+        if (isConfirmed)
+        {
+            confirmPopup.SetActive(false);
+            ContinueDivinationPhase();
+        }
     }
 
-    private void OnIntroDialogueFinished()
+    public void ContinueDivinationPhase()
+    {
+        // TODO: Call this method when the player confirms to enter the divination phase
+        print("Divination phase continue");
+
+        currentState = EncounterState.Divination;
+
+        var question = customerData.Questions[currentQuestionIndex];
+
+        for (int i = 0; i < question.AvailableCards.Length; i++)
+        {
+            // Instantiate the cards around the center of the screen (one card at the center, one on the left, one on the right)
+            var card = tarotCards[i] == null ? Instantiate(tarotCardPrefab, new Vector3((i - 1) * cardSpacing, 0, 0), Quaternion.identity, transform) : tarotCards[i];
+
+            card.InitiateCard(question.AvailableCards[i], () => StartCoroutine(OnCardClicked(card)));
+            tarotCards[i] = card;
+        }
+    }
+
+    private IEnumerator OnCardClicked(TarotCard card)
+    {
+        yield return new WaitForSeconds(delayBeforeReveal);
+        StartCoroutine(FlipAllCards());
+        print("The card was clicked " + card.CardData.Content + " that gives " + card.CardData.CharacterScore);
+    }
+
+    private IEnumerator FlipAllCards()
+    {
+        foreach (var card in tarotCards)
+        {
+            card.FlipCard();
+            yield return new WaitForSeconds(0.35f);
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        foreach (var card in tarotCards)
+        {
+            card.gameObject.SetActive(false);
+            yield return new WaitForSeconds(0.35f);
+        }
+
+        currentQuestionIndex++;
+        if (currentQuestionIndex < customerData.Questions.Length)
+        {
+            ContinueDivinationPhase();
+        }
+        else
+        {
+            currentState = EncounterState.Outro;
+        }
+    }
+
+    private IEnumerator StartEncounterCoroutine()
+    {
+        customer.SetActive(true);
+        yield return new WaitForSeconds(delayBeforeDialogue);
+        dialogueManager.SetNewCustomer(customerData);
+        dialogueManager.SetNewDialogue(customerData.IntroDialogue);
+        dialogueManager.StartDialogue(() => StartCoroutine(OnIntroDialogueFinished()));
+    }
+
+    private IEnumerator OnIntroDialogueFinished()
     {
         currentState = EncounterState.InDialogue;
-    } 
+        // TODO: Make the player able to inspect the customer
+        yield return new WaitForSeconds(delayBeforeBackgroundDialogue);
+        dialogueManager.SetNewDialogue(customerData.Dialogue);
+        dialogueManager.StartDialogue(OnInDialogueFinished);
+    }
 
     private void OnInDialogueFinished()
     {
-        currentState = EncounterState.Divination;
-    }
-
-    private void OnDivinationFinished()
-    {
-        currentState = EncounterState.Outro;
+        // Nothing for now
+        print("The background Dialogue finished");
     }
 }

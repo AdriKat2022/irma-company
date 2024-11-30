@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class ClickZoom : MonoBehaviour
 {
+    [SerializeField] private GameObject baseImage;
     [SerializeField] private GameObject image;
     private bool isImageActive;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +23,9 @@ public class ClickZoom : MonoBehaviour
         else if(Input.GetMouseButtonDown(0) && isImageActive)
         {
             image.SetActive(false);
+            baseImage.SetActive(true);
             isImageActive = false;
+            ActivateObjectsWithTag("Eye");
         }
     }
 
@@ -38,9 +42,34 @@ public class ClickZoom : MonoBehaviour
                 if (image != null)
                 {
                     image.SetActive(true);
+                    baseImage.SetActive(false);
                     isImageActive = true;
+                    DeactivateObjectsWithTag("Eye");
                 }
             }
+        }
+    }
+    void DeactivateObjectsWithTag(string tag)
+    {
+        // Find all objects with the specified tag
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(tag);
+
+        // Loop through and deactivate each one
+        foreach (GameObject obj in objectsWithTag)
+        {
+            obj.GetComponent<SpriteRenderer>().enabled = false;     
+        }
+    }
+
+    void ActivateObjectsWithTag(string tag)
+    {
+        // Find all objects with the specified tag
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(tag);
+
+        // Loop through and deactivate each one
+        foreach (GameObject obj in objectsWithTag)
+        {
+            obj.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }

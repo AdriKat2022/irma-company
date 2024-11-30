@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class TarotCard : MonoBehaviour
 {
+    public CardSlot CardData => cardData;
+
     [SerializeField]
     private Sprite frontSprite;
     [SerializeField]
@@ -19,6 +22,7 @@ public class TarotCard : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool isFlipped = false;
     private bool isFlipping = false;
+    private Action onClick;
 
     private void Start()
     {
@@ -30,9 +34,10 @@ public class TarotCard : MonoBehaviour
         if (!isFlipping) StartCoroutine(Flip());
     }
 
-    public void InitiateCard(CardSlot cardData)
+    public void InitiateCard(CardSlot cardData, Action callBack = null)
     {
         this.cardData = cardData;
+        onClick = callBack;
     }
 
     private IEnumerator Flip()

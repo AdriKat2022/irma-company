@@ -17,16 +17,19 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private Queue<float> nextLineDelays;
     private Queue<bool> isPlayerTalkings;
+    private Queue<AudioClip> audioFiles;
 
     [SerializeField] private TextMeshProUGUI characterNameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator animator;
+    [SerializeField] AudioManager audioManager;
     void Start()
     {
         dialogueWaves = new Queue<DialogueWave>();
         sentences = new Queue<string>();
         isPlayerTalkings = new Queue<bool>();
         nextLineDelays = new Queue<float>();
+        audioFiles = new Queue<AudioClip>();
         dialogue = customerData.Dialogue;
     }
 
@@ -80,6 +83,7 @@ public class DialogueManager : MonoBehaviour
                 sentences.Enqueue(dialogueLine.Text);
                 nextLineDelays.Enqueue(dialogueLine.NextLineDelay);
                 isPlayerTalkings.Enqueue(dialogueLine.isPlayerTalking);
+                audioFiles.Enqueue(dialogueLine.AudioFile);
             }
         }
 
@@ -99,8 +103,9 @@ public class DialogueManager : MonoBehaviour
             string sentence = sentences.Dequeue();
             float nextLineDelay = nextLineDelays.Dequeue();
             bool isPlayerTalking = isPlayerTalkings.Dequeue();
+            AudioClip audioFile = audioFiles.Dequeue();
             if (isPlayerTalking) { characterNameText.text = playerName; } else { characterNameText.text = customerData.Name; }
-            StartCoroutine(TypeSentence(sentence, nextLineDelay, onDialogueComplete));
+            StartCoroutine(TypeSentence(sentence, nextLineDelay, audioFile, onDialogueComplete));
         }
         else 
         {
@@ -109,8 +114,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    IEnumerator TypeSentence(string sentence, float nextLineDelay, Action onDialogueComplete = null)
+    IEnumerator TypeSentence(string sentence, float nextLineDelay, AudioClip audioFile, Action onDialogueComplete = null)
     {
+        audioManager.PlayAudioClip(audioFile);
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
