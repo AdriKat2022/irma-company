@@ -21,8 +21,8 @@ public struct DialogueLine
 [Serializable]
 public struct DialogueWave
 {
-    public DialogueLine[] Lines;
     public AudioClip AudioFile;
+    public DialogueLine[] Lines;
 }
 
 [CreateAssetMenu(fileName = "NewDialogue", menuName = "Dialogue")]
