@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 4693c00829babb54d9076e75c18c564d
+guid: 9543efcbb36242a45a1f449605859849
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -628059644605897295
-    second: perso1_0
+      213: 3807856759384276296
+    second: deckofcards_0
+  - first:
+      213: 6281297088648419931
+    second: deckofcards_1
+  - first:
+      213: 4204917947876881569
+    second: deckofcards_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: perso1_0
+      name: deckofcards_0
       rect:
         serializedVersion: 2
-        x: 547
-        y: 205
-        width: 1158
-        height: 1887
+        x: 1450
+        y: 1327
+        width: 445
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b5e181b41fa847f0800000000000000
-      internalID: -628059644605897295
+      spriteID: 84d7baa3c8938d430800000000000000
+      internalID: 3807856759384276296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deckofcards_1
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 1550
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a95912c66ab2750800000000000000
+      internalID: 6281297088648419931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deckofcards_2
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1506
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a4bdd0589eda5a30800000000000000
+      internalID: 4204917947876881569
       vertices: []
       indices: 
       edges: []
@@ -147,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      perso1_0: -628059644605897295
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
