@@ -26,7 +26,7 @@ MonoBehaviour:
     - CharacterScore: 10
       Content: un coach de gym
     - CharacterScore: 0
-      Content: un gitan
+      Content: un boulanger
   <ReviewTresholds>k__BackingField:
   - RequiredScore: 0
     ReviewText: trop nul
