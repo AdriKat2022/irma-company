@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 6ceac9532d245da4589275d43e7a05a8
+guid: 9543efcbb36242a45a1f449605859849
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -425282376844011726
-    second: cartetarotdos_0
+      213: 3807856759384276296
+    second: deckofcards_0
+  - first:
+      213: 6281297088648419931
+    second: deckofcards_1
+  - first:
+      213: 4204917947876881569
+    second: deckofcards_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cartetarotdos_0
+      name: deckofcards_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 130
-        height: 200
+        x: 1450
+        y: 1327
+        width: 445
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2379af67ee7191af0800000000000000
-      internalID: -425282376844011726
+      spriteID: 84d7baa3c8938d430800000000000000
+      internalID: 3807856759384276296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deckofcards_1
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 1550
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a95912c66ab2750800000000000000
+      internalID: 6281297088648419931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deckofcards_2
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1506
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a4bdd0589eda5a30800000000000000
+      internalID: 4204917947876881569
       vertices: []
       indices: 
       edges: []
@@ -147,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      deckofcards_0: 3807856759384276296
+      deckofcards_1: 6281297088648419931
+      deckofcards_2: 4204917947876881569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ceac9532d245da4589275d43e7a05a8
+guid: 5342eaf74d316c84c80b19b282c3af50
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -425282376844011726
-    second: cartetarotdos_0
+      213: 7977847804061761497
+    second: foreground (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cartetarotdos_0
+      name: foreground (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 130
-        height: 200
+        width: 3840
+        height: 753
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2379af67ee7191af0800000000000000
-      internalID: -425282376844011726
+      spriteID: 9df3b313f4207be60800000000000000
+      internalID: 7977847804061761497
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      foreground (1)_0: 7977847804061761497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
