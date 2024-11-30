@@ -148,7 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830258f0d71a24c4a9875f555b0405b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customerData: {fileID: 11400000, guid: f44deaee7136cb64aabf41d6c860f944, type: 2}
+  playerName: Irma la voyante
+  customerData: {fileID: 11400000, guid: 3412d6ac7e8d6f943ae74f8b0f6cca4a, type: 2}
   characterNameText: {fileID: 1013481702}
   dialogueText: {fileID: 1321710359}
   animator: {fileID: 1068179023}

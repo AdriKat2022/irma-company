@@ -27,6 +27,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         isPlayerTalkings = new Queue<bool>();
         nextLineDelays = new Queue<float>();
+        dialogue = customerData.Dialogue;
     }
 
     void Update()
