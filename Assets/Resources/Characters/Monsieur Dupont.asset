@@ -32,12 +32,12 @@ MonoBehaviour:
       Content: en Russie
       reviewLine: 'Ce pays est [CENSORED], il fait [CENSORED], et il n''[CENSORED].
         [CENSORED]'
-  - InitialSentence: Je vois, je vois, je vois, vous allez devenir...
+  - InitialSentence: Je vois, je vois, je vois, vous allez avoir...
     AvailableCards:
     - CharacterScore: 5
       Content: "un b\xE9b\xE9"
       reviewLine: "Et puis, elle m'a pr\xE9dit un enfant mais je n'ai m\xEAme pas
-        de de copine. A moins que la pr\xE9diction soit sur le b\xE9b\xE9 qui \xE9t\xE9
+        de copine. A moins que la pr\xE9diction soit sur le b\xE9b\xE9 qui \xE9tait
         derri\xE8re moi pendant tout le vol."
     - CharacterScore: 10
       Content: un animal
@@ -51,15 +51,15 @@ MonoBehaviour:
     AvailableCards:
     - CharacterScore: 5
       Content: un pompier
-      reviewLine: "Bon, pompier est un bon m\xE9tier, car je fait du sport mais ma
+      reviewLine: "Bon, pompier est un bon m\xE9tier, car je fais du sport mais ma
         boussole ne me sert \xE0 rien."
     - CharacterScore: 10
       Content: un militaire
-      reviewLine: "Etre militaire c'est surement le meilleur conseil que j'ai eu,
-        je peux enfin tirer sur des gens, et \xE7a a un vrai impacte."
+      reviewLine: "Etre militaire c'est s\xFBrement le meilleur conseil que j'ai
+        eu, je peux enfin tirer sur des gens, et \xE7a a un vrai impact."
     - CharacterScore: 0
       Content: "un \xE9crivain"
-      reviewLine: "Malheureusement je vois mes muscles qui fondent \xE0 vu d'\u0153il,
+      reviewLine: "Malheureusement je vois mes muscles qui fondent \xE0 vue d'\u0153il,
         \xE0 force de rester dans ce fauteuil \xE0 \xE9crire des livres."
   <ReviewTresholds>k__BackingField:
   - RequiredScore: 0
