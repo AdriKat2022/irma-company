@@ -35,6 +35,6 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }
