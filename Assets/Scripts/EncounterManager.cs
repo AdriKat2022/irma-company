@@ -42,6 +42,7 @@ public class EncounterManager : MonoBehaviour
 
     private EncounterState currentState = EncounterState.Intro;
     private TarotCard[] tarotCards;
+    private bool cardSelected = false;
 
     private void Start()
     {
@@ -94,13 +95,19 @@ public class EncounterManager : MonoBehaviour
             // Instantiate the cards around the center of the screen (one card at the center, one on the left, one on the right)
             var card = tarotCards[i] == null ? Instantiate(tarotCardPrefab, new Vector3((i - 1) * cardSpacing, 0, 0), Quaternion.identity, transform) : tarotCards[i];
 
-            card.InitiateCard(question.AvailableCards[i], () => StartCoroutine(OnCardClicked(card)));
+            card.InitiateCard(question.AvailableCards[i], () => StartCoroutine(OnCardClicked(card)), true);
+            card.gameObject.SetActive(true);
+            card.FlipCard(2);
             tarotCards[i] = card;
         }
     }
 
     private IEnumerator OnCardClicked(TarotCard card)
     {
+        if (cardSelected) yield break;
+
+        cardSelected = true;
+
         yield return new WaitForSeconds(delayBeforeReveal);
         StartCoroutine(FlipAllCards());
         print("The card was clicked " + card.CardData.Content + " that gives " + card.CardData.CharacterScore);

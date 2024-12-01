@@ -576,7 +576,7 @@ MonoBehaviour:
   cardSpacing: 3
   delayBeforeDialogue: 1.5
   delayBeforeBackgroundDialogue: 1.5
-  delayBeforeReveal: 2
+  delayBeforeReveal: 0
   dialogueManager: {fileID: 2106636784}
   sentenceText: {fileID: 0}
   tarotCardPrefab: {fileID: -7513391574065306206, guid: 56de357884fde2f41bf4668b5527a8b7, type: 3}
@@ -1096,10 +1096,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

@@ -24,58 +24,68 @@ public class TarotCard : MonoBehaviour
     private bool isFlipping = false;
     private Action onClick;
 
-    private void Start()
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void FlipCard()
+    public void FlipCard(int repeat = 1)
     {
-        if (!isFlipping) StartCoroutine(Flip());
+        if (!isFlipping) StartCoroutine(Flip(repeat));
     }
 
-    public void InitiateCard(CardSlot cardData, Action callBack = null)
+    public void InitiateCard(CardSlot cardData, Action callBack = null, bool faceDown = false)
     {
         this.cardData = cardData;
         cardText.text = cardData.Content;
         onClick = callBack;
+
+        if (faceDown)
+        {
+            isFlipped = true;
+            spriteRenderer.sprite = backSprite;
+            cardText.gameObject.SetActive(true);
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+        }
+        else
+        {
+            isFlipped = false;
+            spriteRenderer.sprite = frontSprite;
+            cardText.gameObject.SetActive(false);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
-    private IEnumerator Flip()
+    private IEnumerator Flip(int repeat = 1)
     {
         isFlipping = true;
-        float elapsedTime = 0f;
 
-        // Rotate to 90 degrees (invisible edge)
-        while (elapsedTime < flipDuration / 2)
+        for (int i = 0; i < repeat; i++)
         {
-            elapsedTime += Time.deltaTime;
-            float rotation = Mathf.Lerp(0, 90, elapsedTime / (flipDuration / 2));
-            transform.rotation = Quaternion.Euler(0, rotation, 0);
-            yield return null;
+            float t = 0;
+            float startAngle = isFlipped ? 90 : 0;
+            float endAngle = isFlipped ? 0 : 90;
+            spriteRenderer.sprite = isFlipped ? backSprite : frontSprite;
+            cardText.gameObject.SetActive(isFlipped);
+            isFlipped = !isFlipped;
+
+            while (t < flipDuration)
+            {
+                t += Time.deltaTime;
+                float angle = Mathf.Lerp(startAngle, endAngle, t / flipDuration);
+                transform.rotation = Quaternion.Euler(0, angle, 0);
+                yield return null;
+            }
+
         }
 
-        // Swap sprite at the halfway point
-        isFlipped = !isFlipped;
-        spriteRenderer.sprite = isFlipped ? frontSprite : backSprite;
+        cardText.gameObject.SetActive(!isFlipped);
 
-        elapsedTime = 0f;
-
-        // Rotate back to 0 degrees (visible face)
-        while (elapsedTime < flipDuration / 2)
-        {
-            elapsedTime += Time.deltaTime;
-            float rotation = Mathf.Lerp(90, 180, elapsedTime / (flipDuration / 2));
-            transform.rotation = Quaternion.Euler(0, rotation, 0);
-            yield return null;
-        }
-
-        transform.rotation = Quaternion.Euler(0, 0, 0); // Ensure exact alignment
         isFlipping = false;
     }
 
     private void OnMouseDown()
     {
-
+        onClick?.Invoke();
     }
 }
