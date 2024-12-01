@@ -1448,10 +1448,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caracter1
       objectReference: {fileID: 0}
-    - target: {fileID: 2737997321822238821, guid: 814fe5e2e1c624147a6972d88406f2bd, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3994987408624048667, guid: 814fe5e2e1c624147a6972d88406f2bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.75
@@ -1491,14 +1487,6 @@ PrefabInstance:
     - target: {fileID: 3994987408624048667, guid: 814fe5e2e1c624147a6972d88406f2bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4681506408831391651, guid: 814fe5e2e1c624147a6972d88406f2bd, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666952727203909048, guid: 814fe5e2e1c624147a6972d88406f2bd, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Sound Effects")]
     public AudioClip cardHoverSound;
-    public AudioClip soundClickSound;
+    public AudioClip clickSound;
     public AudioClip pauseClickSound;
     public AudioClip divinationBeginSound;
 

@@ -49,6 +49,7 @@ public class DialogueManager : MonoBehaviour
         sentences.Clear();
         nextLineDelays.Clear();
         isPlayerTalkings.Clear();
+        audioFiles.Clear();
     }
 
     public void SetNewCustomer(CustomerData customerData)
@@ -61,6 +62,7 @@ public class DialogueManager : MonoBehaviour
         sentences.Clear();
         nextLineDelays.Clear();
         isPlayerTalkings.Clear();
+        audioFiles.Clear();
     }
 
     public void StartDialogue(Action onDialogueComplete = null)

@@ -54,7 +54,7 @@ MonoBehaviour:
   gameThemeMusic: {fileID: 8300000, guid: fe8a83d17afbfaf46973e6c3634dc74d, type: 3}
   googleReviewMusic: {fileID: 8300000, guid: 65ae24b20fa29be4194debc4a2f37168, type: 3}
   cardHoverSound: {fileID: 8300000, guid: 9a4240bddded46a4eb5784dce0d2462e, type: 3}
-  soundClickSound: {fileID: 8300000, guid: 36316d66457c9a342a25170131e3229a, type: 3}
+  clickSound: {fileID: 8300000, guid: 36316d66457c9a342a25170131e3229a, type: 3}
   pauseClickSound: {fileID: 8300000, guid: 03225fb6564d23f449db4c066c95e831, type: 3}
   divinationBeginSound: {fileID: 8300000, guid: 3c537ba969df4ae4fba70bf88623cfb1, type: 3}
 --- !u!1 &284255311049910501

@@ -85,12 +85,14 @@ public class EncounterManager : MonoBehaviour
     {
         if (currentState != EncounterState.InDialogue) return;
 
+        AudioManager.Instance.PlaySoundEffect(AudioManager.Instance.clickSound);
         confirmPopup.SetActive(true);
 
         if (isConfirmed)
         {
+            dialogueManager.StopDialogue();
+            AudioManager.Instance.TooglePauseVoice(false);
             confirmPopup.SetActive(false);
-            
             ContinueDivinationPhase();
         }
     }
@@ -99,8 +101,6 @@ public class EncounterManager : MonoBehaviour
     {
         print("Divination phase continue");
 
-        AudioManager.Instance.TooglePauseMusic(false);
-        AudioManager.Instance.TooglePauseVoice(false);
         AudioManager.Instance.PlaySoundEffect(AudioManager.Instance.divinationBeginSound);
 
         currentState = EncounterState.Divination;
