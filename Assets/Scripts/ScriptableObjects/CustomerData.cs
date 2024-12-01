@@ -6,6 +6,7 @@ public struct CardSlot
 {
     [Range(0, 10)]
     public int CharacterScore;
+    public Sprite Sprite;
     public string Content;
     public string reviewLine;
 }

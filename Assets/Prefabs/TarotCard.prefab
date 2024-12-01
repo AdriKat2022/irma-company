@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabf7a95f22c9b14bad4fc3cc9dd7aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceSprite: {fileID: 0}
+  faceSprite: {fileID: -6588362952938498367, guid: fd87e224ed77b5c489b1fe0a8e77672f, type: 3}
   backSprite: {fileID: -425282376844011726, guid: e64a829e1cab9524bacfa279b72a96df, type: 3}
   cardText: {fileID: 7543031658644482031}
   cardFlipper: {fileID: 6646730695378761029}

@@ -19,12 +19,19 @@ public class CardFlipper : MonoBehaviour
         UpdateSprite(); // Ensure the correct sprite is shown at start
     }
 
+
     private void UpdateSprite()
     {
         spriteRenderer.sprite = isFaceDown ? backSprite : faceSprite;
         ToogleFeatures(!isFaceDown);
     }
 
+    public void SetCurrentFaceSprite(Sprite faceSprite)
+    {
+        this.faceSprite = faceSprite;
+        UpdateSprite();
+    }
+    
     public IEnumerator Flip(int repeat = 1, Action onFlipFinished = null)
     {
         Debug.Log($"FLipping {repeat} times", gameObject);

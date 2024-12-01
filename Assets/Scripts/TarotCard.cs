@@ -20,6 +20,7 @@ public class TarotCard : MonoBehaviour
 
     private CardSlot cardData;
     private Action onClick;
+    private Sprite currentFaceSprite;
 
     public void FlipCard(int repeat = 1, Action onFlipFinished = null)
     {
@@ -32,6 +33,10 @@ public class TarotCard : MonoBehaviour
         this.cardData = cardData;
         cardText.text = cardData.Content;
         onClick = callBack;
+        if (cardData.Sprite) currentFaceSprite = cardData.Sprite;
+        else currentFaceSprite = faceSprite;
+
+        cardFlipper.SetCurrentFaceSprite(currentFaceSprite);
         cardFlipper.SetFaceDown(faceDown);
     }
 
