@@ -18,50 +18,5 @@ MonoBehaviour:
   <ProfilePicture>k__BackingField: {fileID: 0}
   <IntroDialogue>k__BackingField: {fileID: 0}
   <Dialogue>k__BackingField: {fileID: 0}
-  <Questions>k__BackingField:
-  - InitialSentence: "Je vois, je vois, je vois, vous allez \xE9lire r\xE9sidence..."
-    AvailableCards:
-    - CharacterScore: 5
-      Content: en Italie
-      ReviewLine: "La temp\xE9rature est correct mais avec mon allergie au gluten
-        c'est compliqu\xE9"
-    - CharacterScore: 0
-      Content: au Canada
-      ReviewLine: "Brrrr, c'est pire que la France ici, je vais mourir congel\xE9e
-        !!"
-    - CharacterScore: 10
-      Content: "\xE0 Madagascar"
-      ReviewLine: J'ai enfin chaud dans ce pays, merci pour vos conseil
-  - InitialSentence: Je vois, je vois, je vois, vous allez avoir...
-    AvailableCards:
-    - CharacterScore: 0
-      Content: un rencontre
-      ReviewLine: "Au passage, vous m'avez pr\xE9dit une grande rencontre... Hier,
-        j'ai rendu le fisc riche."
-    - CharacterScore: 5
-      Content: "une gu\xE9rison"
-      ReviewLine: "Et puis, gr\xE2ce \xE0 vos conseils, 10 paquets par jour, je ne
-        sens plus mes douleurs\u2026 en fait, je ne sens plus rien du tout. Merci
-        Irma, vous \xEAtes magique !"
-    - CharacterScore: 10
-      Content: "une r\xE9velation spirituelle"
-      ReviewLine: "D\u2019ailleurs, gr\xE2ce \xE0 Irma, fini les vestes en fourrure
-        ! Maintenant, je respecte les animaux\u2026 je ne porte plus que du cuir
-        !"
-  - InitialSentence: Je vois, je vois, je vois, vous serez...
-    AvailableCards:
-    - CharacterScore: 10
-      Content: une influenceuse
-      ReviewLine: "C'est incroyable, j'ai d\xE9j\xE0 100 000 abonn\xE9s, on dirait
-        que tout le monde adore voir quelqu'un qui se plaint tout le temps ! Merci
-        madame Irma"
-    - CharacterScore: 0
-      Content: une grande sportive
-      ReviewLine: "Bon, grande sportive, je ne crois pas... Je me suis foul\xE9 la
-        cheville ! C'est honteux !"
-    - CharacterScore: 5
-      Content: une manequin
-      ReviewLine: "Depuis que je mets en avant ma beaut\xE9, mais je ne gagne plus
-        ma vie\u2026 Si moi la plus belle femme sur terre ne peut pas en vivre, alors
-        qui le pourrait ? Des impostrices ?"
+  <Questions>k__BackingField: []
   <ReviewTresholds>k__BackingField: []
