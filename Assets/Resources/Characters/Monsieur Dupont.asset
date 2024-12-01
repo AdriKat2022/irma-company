@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Monsieur Dupont
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Monsieur Dupont
-  <CharacterSprite>k__BackingField: {fileID: 0}
-  <Username>k__BackingField: 
+  <CharacterSprite>k__BackingField: {fileID: 21300000, guid: 6d1014ee931c8144c8dde485518d247d, type: 3}
+  <Username>k__BackingField: Akira Inu
   <ProfilePicture>k__BackingField: {fileID: 0}
   <IntroDialogue>k__BackingField: {fileID: 11400000, guid: 6e79696f80004b043aa9220f06c80005, type: 2}
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 2d38b431765b254498f7e23fcf930ed2, type: 2}
