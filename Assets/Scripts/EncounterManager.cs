@@ -158,8 +158,8 @@ public class EncounterManager : MonoBehaviour
             // TODO: Display the review
             // Inform the game manager that the encounter is over
 
-            notification.InitializeNotification();
-            notification.MakeReview();
+            // notification.InitializeNotification();
+            // notification.MakeReview();
         }
     }
 
