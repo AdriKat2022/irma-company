@@ -12,4 +12,111 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4891941a97ef84dab49da7055caa4d, type: 3}
   m_Name: Dialogue_Mme_Bourgeois
   m_EditorClassIdentifier: 
-  <DialogueWaves>k__BackingField: []
+  <DialogueWaves>k__BackingField:
+  - Lines:
+    - Text: "Comment allez-vous aujourd\u2019hui ?"
+      isPlayerTalking: 1
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+    - Text: Il fait froid ici, vous avez mis le chauffage ?
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 une sensation\u2026 glaciale, une envie de chaleur,
+        de bien-\xEAtre."
+      isPlayerTalking: 1
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+    - Text: "Glaciale ? C\u2019est carr\xE9ment une chambre froide, ici !"
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 vous recherchez quelque chose de plus\u2026 chaleureux,
+        des fruits tropicaux dans un march\xE9 exotique\u2026 avec des poissons\u2026
+        qui volent."
+      isPlayerTalking: 1
+      NextLineDelay: 3
+      AudioFile: {fileID: 0}
+    - Text: Des poissons qui volent ?
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, dans un sens\u2026 spirituel. Vous voyez, tout est possible."
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: biiiiip
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+    - Text: "Une notification ?! Attendez\u2026 un like. C\u2019est un like !"
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 une lumi\xE8re dans le d\xE9sert num\xE9rique."
+      isPlayerTalking: 1
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+    - Text: "Vous vous rendez compte ? \xC7a fait deux semaines que personne n\u2019a
+        rien lik\xE9 !"
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 un public qui commence \xE0 tendre l\u2019oreille.
+        Mais\u2026 doucement. Trop de likes d\u2019un coup pourrait d\xE9s\xE9quilibrer
+        l\u2019univers."
+      isPlayerTalking: 1
+      NextLineDelay: 4
+      AudioFile: {fileID: 0}
+    - Text: Vous croyez ? Je devrais limiter mes posts ?
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 une publication par pleine lune. Et\u2026 ne sous-estimez
+        jamais le pouvoir des hashtags."
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: "Vous \xEAtes une g\xE9nie."
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026"
+      isPlayerTalking: 1
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+    - Text: Mais au fait, de quoi parlions nous ?
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 des plages infinies, des sourires chaleureux\u2026
+        et des moustiques g\xE9ants."
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: Des moustiques ?
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Spirituels, bien s\xFBr. Tout comme les poissons."
+      isPlayerTalking: 1
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+    - Text: Que voyez vous vraiment ?
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+    - Text: "Oui, je vois\u2026 Les r\xE9ponses sont souvent d\xE9j\xE0 l\xE0. Vous
+        les connaissez. Mon r\xF4le est seulement de les r\xE9v\xE9ler..."
+      isPlayerTalking: 1
+      NextLineDelay: 3
+      AudioFile: {fileID: 0}
