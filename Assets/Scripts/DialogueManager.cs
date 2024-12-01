@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI characterNameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator animator;
-    [SerializeField] AudioManager audioManager;
+
     void Start()
     {
         dialogueWaves = new Queue<DialogueWave>();
@@ -41,7 +41,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
- 
     public void SetNewDialogue(Dialogue dialogue)
     {
         this.dialogue = dialogue;
@@ -116,7 +115,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence, float nextLineDelay, AudioClip audioFile, Action onDialogueComplete = null)
     {
-        audioManager.PlayAudioClip(audioFile);
+        AudioManager.Instance.PlaySoundEffect(audioFile);
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
