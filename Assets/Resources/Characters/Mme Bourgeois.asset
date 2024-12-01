@@ -22,28 +22,34 @@ MonoBehaviour:
   - InitialSentence: "Je vois, je vois, je vois, vous allez \xE9lire r\xE9sidence..."
     AvailableCards:
     - CharacterScore: 5
+      Sprite: {fileID: 5926511380858055563, guid: 0cc37778b064b8343a344b86d5fd1b86, type: 3}
       Content: en Italie
       reviewLine: "La temp\xE9rature est correcte mais avec mon allergie au gluten
         c'est compliqu\xE9."
     - CharacterScore: 0
+      Sprite: {fileID: 4579557864588959995, guid: c707064a935b7fd47b7150ef0b3f2c0c, type: 3}
       Content: au Canada
       reviewLine: "Brrrr, c'est pire que la France ici, je vais mourir congel\xE9e
         !!"
     - CharacterScore: 10
+      Sprite: {fileID: 975101523483746746, guid: de02223de55ee0e41a305aa0bf88fa34, type: 3}
       Content: "\xE0 Madagascar"
       reviewLine: J'ai enfin chaud dans ce pays, merci pour vos conseils.
   - InitialSentence: Je vois, je vois, je vois, vous allez avoir...
     AvailableCards:
     - CharacterScore: 0
+      Sprite: {fileID: -7996597826209130333, guid: 2b23b850d19da334e9b5288df38962aa, type: 3}
       Content: une rencontre
       reviewLine: "Au passage, vous m'avez pr\xE9dit une grande rencontre... Hier,
         j'ai rendu le fisc riche."
     - CharacterScore: 5
+      Sprite: {fileID: -1171264624632005772, guid: 26bb228a29fbf054b9cee98462968f6f, type: 3}
       Content: "une gu\xE9rison"
       reviewLine: "Et puis, gr\xE2ce \xE0 vos conseils, 10 paquets par jour, je ne
         sens plus mes douleurs\u2026 en fait, je ne sens plus rien du tout. Merci
         Irma, vous \xEAtes magique !"
     - CharacterScore: 10
+      Sprite: {fileID: 4464607157689759035, guid: 5cf66b48b21dc514583103fee70e2cb2, type: 3}
       Content: "une r\xE9v\xE9lation spirituelle"
       reviewLine: "D\u2019ailleurs, gr\xE2ce \xE0 Irma, fini les vestes en fourrure
         ! Maintenant, je respecte les animaux\u2026 je ne porte plus que du cuir
@@ -51,15 +57,18 @@ MonoBehaviour:
   - InitialSentence: Je vois, je vois, je vois, vous serez...
     AvailableCards:
     - CharacterScore: 10
+      Sprite: {fileID: -6523608529676823872, guid: 22bd1dbe5d4435c4d8feb52d8823aaa9, type: 3}
       Content: une influenceuse
       reviewLine: "C'est incroyable, j'ai d\xE9j\xE0 100 000 abonn\xE9s, on dirait
         que tout le monde adore voir quelqu'un qui se plaint tout le temps ! Merci
         madame Irma !"
     - CharacterScore: 0
+      Sprite: {fileID: 1335472059566619029, guid: 16300079d574e88448f3a5a7a9095a03, type: 3}
       Content: une grande sportive
       reviewLine: "Bon, grande sportive, je ne crois pas... Je me suis foul\xE9 la
         cheville ! C'est honteux !"
     - CharacterScore: 5
+      Sprite: {fileID: -855709475892889517, guid: a44bec399ffbf474b86e793aef666e9c, type: 3}
       Content: une manequin
       reviewLine: "Depuis que je mets en avant ma beaut\xE9, je ne gagne plus ma
         vie\u2026 Si moi, la plus belle femme sur terre, ne peut pas en vivre, alors

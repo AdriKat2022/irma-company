@@ -22,42 +22,51 @@ MonoBehaviour:
   - InitialSentence: "Je vois, je vois, je vois, vous allez \xE9lire r\xE9sidence..."
     AvailableCards:
     - CharacterScore: 10
+      Sprite: {fileID: 106119555985029987, guid: 3f6cc65dbd64ee349a358026743cacd5, type: 3}
       Content: au Japon
       reviewLine: "Incroyable ce pays, ARIGAT\xD4 GOZAIMASU !"
     - CharacterScore: 5
+      Sprite: {fileID: 7313617089217172080, guid: 4c8f1dce05631004bab79379b2bed44c, type: 3}
       Content: au Mexique
       reviewLine: "Les temples Maya sont superbes mais j'avoue que je me sens pas
         en s\xE9curit\xE9 avec les cartels."
     - CharacterScore: 0
+      Sprite: {fileID: 4886606510357400483, guid: aaeb81760356a9341b50b1c761d95293, type: 3}
       Content: en Russie
       reviewLine: 'Ce pays est [CENSORED], il fait [CENSORED], et il n''[CENSORED].
         [CENSORED]'
   - InitialSentence: Je vois, je vois, je vois, vous allez avoir...
     AvailableCards:
     - CharacterScore: 5
+      Sprite: {fileID: -194479374486848563, guid: e947015f26cfa25458339d8cb58ff9de, type: 3}
       Content: "un b\xE9b\xE9"
       reviewLine: "Et puis, elle m'a pr\xE9dit un enfant mais je n'ai m\xEAme pas
         de copine. A moins que la pr\xE9diction soit sur le b\xE9b\xE9 qui \xE9tait
         derri\xE8re moi pendant tout le vol."
     - CharacterScore: 10
+      Sprite: {fileID: 3111648254185407119, guid: 9593bd41dc77e5945bc4a5e0b4a8cd0e, type: 3}
       Content: un animal
       reviewLine: "D\u2019ailleurs, gr\xE2ce \xE0 Irma, j'ai trouv\xE9 juste apr\xE8s
         la s\xE9ance un chiot que j'ai adopt\xE9."
     - CharacterScore: 0
+      Sprite: {fileID: 3649772621284108678, guid: 5bec79aeb8940c14aa52caba48b555e1, type: 3}
       Content: "un grand succ\xE8s"
       reviewLine: "Au passage, vous m'avez pr\xE9dit un grand succ\xE8s, mais je
         suis introverti, je n'ai pas envie d'\xEAtre mis sur le devant de la sc\xE8ne..."
   - InitialSentence: Je vois, je vois, je vois, vous allez devenir...
     AvailableCards:
     - CharacterScore: 5
+      Sprite: {fileID: 7715194672953362836, guid: f911b6dc4058f3c4fbcfaf7d643e62ef, type: 3}
       Content: un pompier
       reviewLine: "Bon, pompier est un bon m\xE9tier, car je fais du sport mais ma
         boussole ne me sert \xE0 rien."
     - CharacterScore: 10
+      Sprite: {fileID: -7121167112864367192, guid: 705dff2449aee1f48ad169efb1b5f552, type: 3}
       Content: un militaire
       reviewLine: "Etre militaire c'est s\xFBrement le meilleur conseil que j'ai
         eu, je peux enfin tirer sur des gens, et \xE7a a un vrai impact."
     - CharacterScore: 0
+      Sprite: {fileID: -4321726919763382518, guid: d8bc1519cce7c494e84f2c75b8d432d7, type: 3}
       Content: "un \xE9crivain"
       reviewLine: "Malheureusement je vois mes muscles qui fondent \xE0 vue d'\u0153il,
         \xE0 force de rester dans ce fauteuil \xE0 \xE9crire des livres."
