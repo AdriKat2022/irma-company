@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Irma la voyante
-  customerData: {fileID: 11400000, guid: c21ddd0572265ad4c89eb3a65dcdbc2f, type: 2}
+  customerData: {fileID: 11400000, guid: 93e8249e9fc3b5c40841f39e0eb59cc1, type: 2}
   characterNameText: {fileID: 1013481702}
   dialogueText: {fileID: 1321710359}
   animator: {fileID: 1068179023}
@@ -818,6 +818,22 @@ PrefabInstance:
     - target: {fileID: 7503676769343889292, guid: 8803044b6de1b6e4cbf321d0c8083b16, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852115304398587196, guid: 8803044b6de1b6e4cbf321d0c8083b16, type: 3}
+      propertyPath: m_margin.w
+      value: 27.810982
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852115304398587196, guid: 8803044b6de1b6e4cbf321d0c8083b16, type: 3}
+      propertyPath: m_margin.x
+      value: 81.88779
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852115304398587196, guid: 8803044b6de1b6e4cbf321d0c8083b16, type: 3}
+      propertyPath: m_margin.y
+      value: 15.450531
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852115304398587196, guid: 8803044b6de1b6e4cbf321d0c8083b16, type: 3}
+      propertyPath: m_margin.z
+      value: 57.167053
       objectReference: {fileID: 0}
     - target: {fileID: 8852115304398587196, guid: 8803044b6de1b6e4cbf321d0c8083b16, type: 3}
       propertyPath: m_fontAsset
