@@ -80,19 +80,15 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PauseMusic()
+    public void TooglePauseMusic(bool play)
     {
-        if (musicSource.isPlaying)
-        {
-            musicSource.Stop();
-        }
+        if (!play) musicSource.Pause();
+        else musicSource.Play();
     }
 
-    public void PauseVoice()
+    public void TooglePauseVoice(bool play)
     {
-        if (voiceSource.isPlaying)
-        {
-            voiceSource.Pause();
-        }
+        if (!play) voiceSource.Pause();
+        else voiceSource.Play();
     }
 }
