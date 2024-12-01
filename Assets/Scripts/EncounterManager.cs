@@ -39,6 +39,8 @@ public class EncounterManager : MonoBehaviour
     private TarotCard tarotCardPrefab;
     [SerializeField]
     private GameObject confirmPopup;
+    [SerializeField]
+    private ReviewNotification notification;
 
     private int currentQuestionIndex = 0;
 
@@ -155,6 +157,9 @@ public class EncounterManager : MonoBehaviour
             yield return new WaitForSeconds(delayBeforeReview);
             // TODO: Display the review
             // Inform the game manager that the encounter is over
+
+            notification.InitializeNotification();
+            notification.MakeReview();
         }
     }
 
