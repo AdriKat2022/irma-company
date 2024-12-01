@@ -7,7 +7,6 @@ public struct CardSlot
     [Range(0, 10)]
     public int CharacterScore;
     public string Content;
-    public string ReviewLine;
 }
 
 [Serializable]
