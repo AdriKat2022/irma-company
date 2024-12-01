@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Mme_Portepoisse
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Madame Portepoisse
-  <CharacterSprite>k__BackingField: {fileID: 0}
-  <Username>k__BackingField: 
+  <CharacterSprite>k__BackingField: {fileID: 21300000, guid: 32a21632ed4a78b459d643d3d723ee7b, type: 3}
+  <Username>k__BackingField: Slayeuse de la Nuit
   <ProfilePicture>k__BackingField: {fileID: 0}
   <IntroDialogue>k__BackingField: {fileID: 11400000, guid: c2167e06cb1cc874e9eb01fb2e94aff0, type: 2}
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 337464a7346faf848b2317764dec9640, type: 2}
