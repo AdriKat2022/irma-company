@@ -128,6 +128,12 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence(onDialogueComplete);
     }
 
+    public void StopDialogue(Action onDialogueComplete = null)
+    {
+        StopAllCoroutines();
+        EndDialogue(onDialogueComplete);
+    }
+
     public void EndDialogue(Action onDialogueComplete = null)
     {
         dialogueText.text = "";
