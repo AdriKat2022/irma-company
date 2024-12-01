@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d180b0465a249cd46ab978f1ae61bcab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customerData: {fileID: 11400000, guid: c21ddd0572265ad4c89eb3a65dcdbc2f, type: 2}
+  customerData: {fileID: 11400000, guid: 93e8249e9fc3b5c40841f39e0eb59cc1, type: 2}
   customer: {fileID: 1486524307}
   cardSpacing: 3
   delayBeforeDialogue: 1.5
