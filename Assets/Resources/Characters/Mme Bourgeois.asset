@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76beacedb660b1f47b37680517e1eb93, type: 3}
   m_Name: Mme Bourgeois
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Madame Bourgeois
   <CharacterSprite>k__BackingField: {fileID: 0}
   <Username>k__BackingField: 
   <ProfilePicture>k__BackingField: {fileID: 0}
-  <IntroDialogue>k__BackingField: {fileID: 0}
-  <Dialogue>k__BackingField: {fileID: 0}
+  <IntroDialogue>k__BackingField: {fileID: 11400000, guid: 887386e860bf976448c5cbbd2a992771, type: 2}
+  <Dialogue>k__BackingField: {fileID: 11400000, guid: 8bb4335cf1d0eb549bd8bf94a037444a, type: 2}
   <Questions>k__BackingField: []
   <ReviewTresholds>k__BackingField: []
