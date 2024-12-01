@@ -77,6 +77,7 @@ public class EncounterManager : MonoBehaviour
         if (isConfirmed)
         {
             confirmPopup.SetActive(false);
+            // TODO: Make sound effect
             ContinueDivinationPhase();
         }
     }
@@ -97,7 +98,10 @@ public class EncounterManager : MonoBehaviour
 
             card.InitiateCard(question.AvailableCards[i], () => StartCoroutine(OnCardClicked(card)), true);
             card.gameObject.SetActive(true);
-            card.FlipCard(2);
+
+            if (i == question.AvailableCards.Length - 1) card.FlipCard(2, () => cardSelected = false);
+            else card.FlipCard(2)
+                    ;
             tarotCards[i] = card;
         }
     }

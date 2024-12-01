@@ -8,7 +8,7 @@ public class TarotCard : MonoBehaviour
     public CardSlot CardData => cardData;
 
     [SerializeField]
-    private Sprite frontSprite;
+    private Sprite faceSprite;
     [SerializeField]
     private Sprite backSprite;
     [SerializeField]
@@ -20,7 +20,7 @@ public class TarotCard : MonoBehaviour
 
     private CardSlot cardData;
     private SpriteRenderer spriteRenderer;
-    private bool isFlipped = false;
+    private bool isFaceDown = false;
     private bool isFlipping = false;
     private Action onClick;
 
@@ -29,9 +29,9 @@ public class TarotCard : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void FlipCard(int repeat = 1)
+    public void FlipCard(int repeat = 1, Action onFlipFinished = null)
     {
-        if (!isFlipping) StartCoroutine(Flip(repeat));
+        if (!isFlipping) StartCoroutine(Flip(repeat, onFlipFinished));
     }
 
     public void InitiateCard(CardSlot cardData, Action callBack = null, bool faceDown = false)
@@ -42,46 +42,48 @@ public class TarotCard : MonoBehaviour
 
         if (faceDown)
         {
-            isFlipped = true;
+            isFaceDown = true;
             spriteRenderer.sprite = backSprite;
-            cardText.gameObject.SetActive(true);
-            transform.rotation = Quaternion.Euler(0, 90, 0);
         }
-        else
-        {
-            isFlipped = false;
-            spriteRenderer.sprite = frontSprite;
-            cardText.gameObject.SetActive(false);
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+        else {
+            isFaceDown = false;
+            spriteRenderer.sprite = faceSprite;
         }
     }
 
-    private IEnumerator Flip(int repeat = 1)
+    private IEnumerator Flip(int repeat = 1, Action onFlipFinished = null)
     {
         isFlipping = true;
 
         for (int i = 0; i < repeat; i++)
         {
-            float t = 0;
-            float startAngle = isFlipped ? 90 : 0;
-            float endAngle = isFlipped ? 0 : 90;
-            spriteRenderer.sprite = isFlipped ? backSprite : frontSprite;
-            cardText.gameObject.SetActive(isFlipped);
-            isFlipped = !isFlipped;
+            float time = 0;
+            Vector3 scale = transform.localScale;
+            Vector3 targetScale = new Vector3(0, scale.y, scale.z);
 
-            while (t < flipDuration)
+            while (time < flipDuration)
             {
-                t += Time.deltaTime;
-                float angle = Mathf.Lerp(startAngle, endAngle, t / flipDuration);
-                transform.rotation = Quaternion.Euler(0, angle, 0);
+                time += Time.deltaTime;
+                transform.localScale = Vector3.Lerp(scale, targetScale, time / flipDuration);
                 yield return null;
             }
 
+            spriteRenderer.sprite = isFaceDown ? faceSprite : backSprite;
+            isFaceDown = !isFaceDown;
+
+            time = 0;
+            scale = transform.localScale;
+            targetScale = new Vector3(1, scale.y, scale.z);
+
+            while (time < flipDuration)
+            {
+                time += Time.deltaTime;
+                transform.localScale = Vector3.Lerp(scale, targetScale, time / flipDuration);
+                yield return null;
+            }
         }
 
-        cardText.gameObject.SetActive(!isFlipped);
-
-        isFlipping = false;
+        onFlipFinished?.Invoke();
     }
 
     private void OnMouseDown()
