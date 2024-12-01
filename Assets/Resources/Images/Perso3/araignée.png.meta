@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ceac9532d245da4589275d43e7a05a8
+guid: 2e6fd71be9848eb4393f5493406bf931
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -425282376844011726
-    second: cartetarotdos_0
+      213: -3168382838638654381
+    second: "araign\xE9e_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cartetarotdos_0
+      name: "araign\xE9e_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 130
-        height: 200
+        x: 1583
+        y: 1079
+        width: 338
+        height: 346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2379af67ee7191af0800000000000000
-      internalID: -425282376844011726
+      spriteID: 35ccf765894a704d0800000000000000
+      internalID: -3168382838638654381
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cartetarotdos_0: -425282376844011726
+      "araign\xE9e_0": -3168382838638654381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
