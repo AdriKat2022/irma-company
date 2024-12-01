@@ -12,9 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4891941a97ef84dab49da7055caa4d, type: 3}
   m_Name: Intro_Mme_Bourgeois
   m_EditorClassIdentifier: 
-  <DialogueWaves>k__BackingField:
-  - Lines:
-    - Text: Bonjour, Madame.
-      isPlayerTalking: 0
-      NextLineDelay: 1
-      AudioFile: {fileID: 0}
+  <DialogueWaves>k__BackingField: []
