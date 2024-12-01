@@ -39,6 +39,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Paused()
     {
+        AudioManager.Instance.TooglePauseVoice(false);
         Debug.Log("Entering paused state");
         pauseMenuUI.SetActive(true); // Activer notre menu pause et l'afficher
         Time.timeScale = 0; // "Arrêter" le temps
@@ -47,6 +48,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        AudioManager.Instance.TooglePauseVoice(true);
         Debug.Log("Exiting paused state");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
