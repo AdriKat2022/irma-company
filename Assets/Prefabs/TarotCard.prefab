@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -7513391574065306206}
   - component: {fileID: 3920780537335656771}
   - component: {fileID: 8255268477186537178}
+  - component: {fileID: 6646730695378761029}
   - component: {fileID: 7598624898670541650}
   m_Layer: 0
   m_Name: TarotCard
@@ -31,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.31, y: 0.31, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8831356148433348417}
   m_Father: {fileID: 0}
@@ -104,10 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabf7a95f22c9b14bad4fc3cc9dd7aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontSprite: {fileID: -6588362952938498367, guid: fd87e224ed77b5c489b1fe0a8e77672f, type: 3}
+  faceSprite: {fileID: 0}
   backSprite: {fileID: -425282376844011726, guid: e64a829e1cab9524bacfa279b72a96df, type: 3}
-  flipDuration: 0.5
   cardText: {fileID: 7543031658644482031}
+  cardFlipper: {fileID: 6646730695378761029}
 --- !u!114 &3920780537335656771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +140,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growthFactor: 1.2
   growthSpeed: 10
+--- !u!114 &6646730695378761029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357464855182550053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6bc45ff40b94d343bd79e2146430a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontCardFeatures:
+  - {fileID: 8254996644083334721}
+  faceSprite: {fileID: -6588362952938498367, guid: fd87e224ed77b5c489b1fe0a8e77672f, type: 3}
+  backSprite: {fileID: -425282376844011726, guid: e64a829e1cab9524bacfa279b72a96df, type: 3}
+  flipDuration: 0.5
+  isFaceDown: 0
 --- !u!61 &7598624898670541650
 BoxCollider2D:
   m_ObjectHideFlags: 0
