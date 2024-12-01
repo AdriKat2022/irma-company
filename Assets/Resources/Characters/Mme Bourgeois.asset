@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Madame Bourgeois
   <CharacterSprite>k__BackingField: {fileID: 0}
-  <Username>k__BackingField: 
-  <ProfilePicture>k__BackingField: {fileID: 0}
+  <Username>k__BackingField: Miss BCBG
+  <ProfilePicture>k__BackingField: {fileID: 21300000, guid: d2039c3a8baecc148aafe2035da7e7a7, type: 3}
   <IntroDialogue>k__BackingField: {fileID: 11400000, guid: 887386e860bf976448c5cbbd2a992771, type: 2}
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 8bb4335cf1d0eb549bd8bf94a037444a, type: 2}
   <Questions>k__BackingField:
