@@ -1,11 +1,17 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
     // Make singleton
 
     public static AudioManager Instance;
+
+    [SerializeField]
+    private AudioSource musicSource;
+    [SerializeField]
+    private AudioSource soundEffectSource;
+    [SerializeField]
+    private AudioSource voiceSource;
 
     [Header("Musics")]
     public AudioClip menuMusic;
@@ -18,9 +24,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip pauseClickSound;
     public AudioClip divinationBeginSound;
 
-    private AudioSource musicSource;
-    private AudioSource soundEffectSource;
-    private AudioSource voiceSource;
 
     private void Awake()
     {
@@ -37,6 +40,7 @@ public class AudioManager : MonoBehaviour
     {
         if (clip != null)
         {
+            print("Playing " + clip.name);
             soundEffectSource.PlayOneShot(clip, volume);
         }
         else
@@ -65,6 +69,7 @@ public class AudioManager : MonoBehaviour
         {
             if (voiceSource.isPlaying) Debug.LogWarning("AudioManager: Un clip vocal est déjà en cours de lecture ! Lancement du fichier tout de même.");
 
+            print("Playing " + clip.name);
             voiceSource.clip = clip;
             voiceSource.volume = volume;
             voiceSource.Play();
