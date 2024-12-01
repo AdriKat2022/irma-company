@@ -44,8 +44,7 @@ MonoBehaviour:
     - CharacterScore: 0
       Content: vous marier
       reviewLine: "En plus, je me suis mari\xE9e... et j\u2019ai d\xE9j\xE0 pr\xE9par\xE9
-        mon discours de rupture. Pas pr\xEAte de remettre une bague \xE0 ce doigt.
-        \U0001F595"
+        mon discours de rupture. Pas pr\xEAte de remettre une bague \xE0 ce doigt."
     - CharacterScore: 5
       Content: "d\xE9m\xE9nager"
       reviewLine: "Super d\xE9m\xE9nagement... enfin un peu de changement, m\xEAme
