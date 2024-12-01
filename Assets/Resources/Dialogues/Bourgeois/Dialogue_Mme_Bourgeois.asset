@@ -26,7 +26,7 @@ MonoBehaviour:
     - Text: "Oui, je vois\u2026 une sensation\u2026 glaciale, une envie de chaleur,
         de bien-\xEAtre."
       isPlayerTalking: 1
-      NextLineDelay: 2
+      NextLineDelay: 3.5
       AudioFile: {fileID: 8300000, guid: cdf4c1b366f347446be81aae3d209e0a, type: 3}
     - Text: "Glaciale ? C\u2019est carr\xE9ment une chambre froide, ici !"
       isPlayerTalking: 0
@@ -44,17 +44,17 @@ MonoBehaviour:
       NextLineDelay: 0.8
       AudioFile: {fileID: 8300000, guid: a57ac01bfdd78be4a80d068052b0bfed, type: 3}
   - Lines:
-    - Text: "Oui, dans un sens\u2026 spirituel. Vous voyez, tout est possible."
+    - Text: "Oui, je vois... dans un sens\u2026 spirituel. Vous voyez, tout est possible."
       isPlayerTalking: 1
-      NextLineDelay: 2
+      NextLineDelay: 4
       AudioFile: {fileID: 8300000, guid: aa33bd1f982e65b41a8566001ee00da8, type: 3}
     - Text: "Une notification ?! Attendez\u2026 un like. C\u2019est un like !"
       isPlayerTalking: 0
-      NextLineDelay: 2
+      NextLineDelay: 3
       AudioFile: {fileID: 8300000, guid: ca1788a0419b3804bab4327ab7dac3f1, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026 une lumi\xE8re dans le d\xE9sert num\xE9rique."
-      isPlayerTalking: 0
+      isPlayerTalking: 1
       NextLineDelay: 2
       AudioFile: {fileID: 8300000, guid: de01bd15dad232c43b1ed94d21974b70, type: 3}
     - Text: "Vous vous rendez compte ? \xC7a fait deux semaines que personne n\u2019a
@@ -77,11 +77,11 @@ MonoBehaviour:
     - Text: "Oui, je vois\u2026 une publication par pleine lune. Et\u2026 ne sous-estimez
         jamais le pouvoir des hashtags."
       isPlayerTalking: 1
-      NextLineDelay: 2
+      NextLineDelay: 3
       AudioFile: {fileID: 8300000, guid: 71f3d6ddf8771a741a5132359294cd76, type: 3}
     - Text: "Vous \xEAtes une g\xE9nie."
       isPlayerTalking: 0
-      NextLineDelay: 0.8
+      NextLineDelay: 1
       AudioFile: {fileID: 8300000, guid: 76fae2d73b73d0b4d87435eace74f01f, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026"
@@ -90,7 +90,7 @@ MonoBehaviour:
       AudioFile: {fileID: 8300000, guid: 7995353688c3e384eacd97fc571a1498, type: 3}
     - Text: 'Mais au fait, de quoi parlions nous ? '
       isPlayerTalking: 0
-      NextLineDelay: 1
+      NextLineDelay: 0.8
       AudioFile: {fileID: 8300000, guid: a7dacaa1914edd840b3bb4d387557d1a, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026 des plages infinies, des sourires chaleureux\u2026
@@ -103,9 +103,9 @@ MonoBehaviour:
       NextLineDelay: 0.5
       AudioFile: {fileID: 8300000, guid: b86bdfca3ae2d7945b5a3d9d09c5887a, type: 3}
   - Lines:
-    - Text: "Spirituels, bien s\xFBr. Tout comme les poissons. "
+    - Text: "Oui, je vois... Spirituels, bien s\xFBr. Tout comme les poissons. "
       isPlayerTalking: 1
-      NextLineDelay: 2
+      NextLineDelay: 3
       AudioFile: {fileID: 8300000, guid: d7d7bd817d0dabe4aaa770640918abd6, type: 3}
     - Text: Que voyez vous vraiment ?
       isPlayerTalking: 0
