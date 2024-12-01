@@ -16,8 +16,8 @@ MonoBehaviour:
   <CharacterSprite>k__BackingField: {fileID: 0}
   <Username>k__BackingField: 
   <ProfilePicture>k__BackingField: {fileID: 0}
-  <IntroDialogue>k__BackingField: {fileID: 0}
-  <Dialogue>k__BackingField: {fileID: 0}
+  <IntroDialogue>k__BackingField: {fileID: 11400000, guid: c2167e06cb1cc874e9eb01fb2e94aff0, type: 2}
+  <Dialogue>k__BackingField: {fileID: 11400000, guid: 337464a7346faf848b2317764dec9640, type: 2}
   <Questions>k__BackingField:
   - InitialSentence: "Je vois, je vois, je vois, vous allez \xE9lire r\xE9sidence..."
     AvailableCards:
