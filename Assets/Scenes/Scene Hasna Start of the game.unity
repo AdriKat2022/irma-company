@@ -387,6 +387,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5799e509c21b1be4590e62a6a03bbe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuMusic: {fileID: 0}
+  gameThemeMusic: {fileID: 0}
+  googleReviewMusic: {fileID: 0}
+  cardHoverSound: {fileID: 0}
+  soundClickSound: {fileID: 0}
+  pauseClickSound: {fileID: 0}
+  divinationBeginSound: {fileID: 0}
 --- !u!4 &500031127
 Transform:
   m_ObjectHideFlags: 0
@@ -2057,7 +2064,7 @@ PrefabInstance:
     - target: {fileID: 7780486128329408176, guid: e9814ccd7cf4b06498d9c15a4724d854, type: 3}
       propertyPath: soundSurvoler
       value: 
-      objectReference: {fileID: 8300000, guid: d7b6fcc5994a69445ab52ad3706c2220, type: 3}
+      objectReference: {fileID: 8300000, guid: 9a4240bddded46a4eb5784dce0d2462e, type: 3}
     - target: {fileID: 7780486128329408176, guid: e9814ccd7cf4b06498d9c15a4724d854, type: 3}
       propertyPath: soundBruitages
       value: 
