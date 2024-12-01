@@ -25,6 +25,6 @@ public class ReviewNotification : MonoBehaviour
 
     private void GetNumberOfStars()
     {
-        numberOfStarsPicture = Resources.Load($"Assets/Resources/Images/Review/{numberOfStars}etoile.png") as Image;
+        numberOfStarsPicture.sprite = Resources.Load($"Assets/Resources/Images/Review/{numberOfStars}etoile.png") as Sprite;
     }
 }
