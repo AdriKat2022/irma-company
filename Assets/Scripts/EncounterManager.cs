@@ -36,7 +36,9 @@ public class EncounterManager : MonoBehaviour
     [SerializeField]
     private DialogueManager dialogueManager;
     [SerializeField]
-    private TextMeshProUGUI sentenceText;
+    private GameObject questionTextObject;
+    [SerializeField]
+    private TextMeshProUGUI questionText;
     [SerializeField]
     private TarotCard tarotCardPrefab;
     [SerializeField]
@@ -57,7 +59,7 @@ public class EncounterManager : MonoBehaviour
         // TODO: should be called by the game manager
         AudioManager.Instance.PlayMusic(AudioManager.Instance.gameThemeMusic);
         tarotCards = new TarotCard[3];
-        //StartEncounter(customerData, customer);
+        questionTextObject.SetActive(false);
     }
 
 
@@ -108,7 +110,9 @@ public class EncounterManager : MonoBehaviour
 
         var question = customerData.Questions[currentQuestionIndex];
 
-        // TODO: Display the sentence to complete
+        questionText.text = question.InitialSentence;
+        questionTextObject.SetActive(true);
+        print("Set text: " + question.InitialSentence);
 
         // Display the tarot cards
         for (int i = 0; i < question.AvailableCards.Length; i++)
@@ -129,6 +133,7 @@ public class EncounterManager : MonoBehaviour
     {
         if (cardSelected) yield break;
 
+        questionTextObject.SetActive(false);
         cardSelected = true;
         reviewContent += card.CardData.reviewLine + "\n";
         StartCoroutine(FlipAllCards());
