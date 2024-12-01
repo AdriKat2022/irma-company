@@ -19,7 +19,7 @@ public class ReviewNotification : MonoBehaviour
         usernameText.text = username;
         numberOfStars = nbOfStars;
         contentText.text = content;
-        AudioManager.Instance.PlaySoundEffect(AudioManager.Instance.googleReviewMusic);
+        AudioManager.Instance.PlaySoundEffect(AudioManager.Instance.googleReviewMusic, 0.5f);
         GetNumberOfStars();
     }
 
