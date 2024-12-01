@@ -18,8 +18,8 @@ public class ReviewNotification : MonoBehaviour
 
     private void Start()
     {
-        profilePicture.rectTransform.position = new Vector3(-750f, 350f, 0);
-        numberOfStarsPicture.rectTransform.position = new Vector3(-300f, 250f, 0);
+        //profilePicture.rectTransform.position = new Vector3(-750f, 350f, 0);
+        //numberOfStarsPicture.rectTransform.position = new Vector3(-300f, 250f, 0);
     }
 
     public void InitializeNotification(Sprite profilePicture, string username, int nbOfStars)
