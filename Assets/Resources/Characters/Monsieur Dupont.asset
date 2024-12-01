@@ -30,8 +30,8 @@ MonoBehaviour:
         en s\xE9curit\xE9 avec les cartels."
     - CharacterScore: 0
       Content: en Russie
-      reviewLine: Ce pays est merdique, il fait trop froid, et il n'y a rien. Ne
-        venez pas.
+      reviewLine: 'Ce pays est [CENSORED], il fait [CENSORED], et il n''[CENSORED].
+        [CENSORED]'
   - InitialSentence: Je vois, je vois, je vois, vous allez devenir...
     AvailableCards:
     - CharacterScore: 5
