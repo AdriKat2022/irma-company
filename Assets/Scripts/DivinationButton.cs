@@ -12,9 +12,12 @@ public class DivinationButton : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private Image image;
 
     private bool isMouseHovering;
+    public AudioSource audioSourceSurvoler;
+    public AudioClip soundSurvoler;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        audioSourceSurvoler.PlayOneShot(soundSurvoler);
         print("that works");
         image.sprite = hoverDeck;
     }

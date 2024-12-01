@@ -8,7 +8,7 @@ public class TarotCard : MonoBehaviour
     public CardSlot CardData => cardData;
 
     [SerializeField]
-    private Sprite frontSprite;
+    private Sprite faceSprite;
     [SerializeField]
     private Sprite backSprite;
     [SerializeField]
@@ -20,62 +20,74 @@ public class TarotCard : MonoBehaviour
 
     private CardSlot cardData;
     private SpriteRenderer spriteRenderer;
-    private bool isFlipped = false;
+    private bool isFaceDown = false;
     private bool isFlipping = false;
     private Action onClick;
 
-    private void Start()
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void FlipCard()
+    public void FlipCard(int repeat = 1, Action onFlipFinished = null)
     {
-        if (!isFlipping) StartCoroutine(Flip());
+        if (!isFlipping) StartCoroutine(Flip(repeat, onFlipFinished));
     }
 
-    public void InitiateCard(CardSlot cardData, Action callBack = null)
+    public void InitiateCard(CardSlot cardData, Action callBack = null, bool faceDown = false)
     {
         this.cardData = cardData;
         cardText.text = cardData.Content;
         onClick = callBack;
+
+        if (faceDown)
+        {
+            isFaceDown = true;
+            spriteRenderer.sprite = backSprite;
+        }
+        else {
+            isFaceDown = false;
+            spriteRenderer.sprite = faceSprite;
+        }
     }
 
-    private IEnumerator Flip()
+    private IEnumerator Flip(int repeat = 1, Action onFlipFinished = null)
     {
         isFlipping = true;
-        float elapsedTime = 0f;
 
-        // Rotate to 90 degrees (invisible edge)
-        while (elapsedTime < flipDuration / 2)
+        for (int i = 0; i < repeat; i++)
         {
-            elapsedTime += Time.deltaTime;
-            float rotation = Mathf.Lerp(0, 90, elapsedTime / (flipDuration / 2));
-            transform.rotation = Quaternion.Euler(0, rotation, 0);
-            yield return null;
+            float time = 0;
+            Vector3 scale = transform.localScale;
+            Vector3 targetScale = new Vector3(0, scale.y, scale.z);
+
+            while (time < flipDuration)
+            {
+                time += Time.deltaTime;
+                transform.localScale = Vector3.Lerp(scale, targetScale, time / flipDuration);
+                yield return null;
+            }
+
+            spriteRenderer.sprite = isFaceDown ? faceSprite : backSprite;
+            isFaceDown = !isFaceDown;
+
+            time = 0;
+            scale = transform.localScale;
+            targetScale = new Vector3(1, scale.y, scale.z);
+
+            while (time < flipDuration)
+            {
+                time += Time.deltaTime;
+                transform.localScale = Vector3.Lerp(scale, targetScale, time / flipDuration);
+                yield return null;
+            }
         }
 
-        // Swap sprite at the halfway point
-        isFlipped = !isFlipped;
-        spriteRenderer.sprite = isFlipped ? frontSprite : backSprite;
-
-        elapsedTime = 0f;
-
-        // Rotate back to 0 degrees (visible face)
-        while (elapsedTime < flipDuration / 2)
-        {
-            elapsedTime += Time.deltaTime;
-            float rotation = Mathf.Lerp(90, 180, elapsedTime / (flipDuration / 2));
-            transform.rotation = Quaternion.Euler(0, rotation, 0);
-            yield return null;
-        }
-
-        transform.rotation = Quaternion.Euler(0, 0, 0); // Ensure exact alignment
-        isFlipping = false;
+        onFlipFinished?.Invoke();
     }
 
     private void OnMouseDown()
     {
-
+        onClick?.Invoke();
     }
 }
