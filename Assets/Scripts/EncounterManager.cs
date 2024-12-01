@@ -53,6 +53,7 @@ public class EncounterManager : MonoBehaviour
     private bool cardSelected = true;
 
     private string reviewContent;
+    private int starCount;
 
     private void Start()
     {
@@ -72,6 +73,7 @@ public class EncounterManager : MonoBehaviour
     public void StartEncounter(CustomerData customerData, GameObject customer)
     {
         reviewContent = "";
+        starCount = 0;
         currentQuestionIndex = 0;
 
         print("Encounter started with " + customerData.ToString());
@@ -136,6 +138,7 @@ public class EncounterManager : MonoBehaviour
         questionTextObject.SetActive(false);
         cardSelected = true;
         reviewContent += card.CardData.reviewLine + "\n";
+        starCount += card.CardData.CharacterScore;
         StartCoroutine(FlipAllCards());
         print("The card was clicked " + card.CardData.Content + " that gives " + card.CardData.CharacterScore);
     }
@@ -149,8 +152,6 @@ public class EncounterManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
-
-        
 
         currentQuestionIndex++;
         if (currentQuestionIndex < customerData.Questions.Length)
@@ -174,7 +175,7 @@ public class EncounterManager : MonoBehaviour
             // Inform the game manager that the encounter is over
 
             notification.gameObject.SetActive(true);
-            notification.InitializeNotification(customerData.ProfilePicture, customerData.Username, 3, reviewContent);
+            notification.InitializeNotification(customerData.ProfilePicture, customerData.Username, starCount/6, reviewContent);
 
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
