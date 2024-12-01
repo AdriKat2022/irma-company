@@ -23,15 +23,15 @@ MonoBehaviour:
     AvailableCards:
     - CharacterScore: 5
       Content: en Italie
-      reviewLine: "La temp\xE9rature est correct mais avec mon allergie au gluten
-        c'est compliqu\xE9"
+      reviewLine: "La temp\xE9rature est correcte mais avec mon allergie au gluten
+        c'est compliqu\xE9."
     - CharacterScore: 0
       Content: au Canada
       reviewLine: "Brrrr, c'est pire que la France ici, je vais mourir congel\xE9e
         !!"
     - CharacterScore: 10
       Content: "\xE0 Madagascar"
-      reviewLine: J'ai enfin chaud dans ce pays, merci pour vos conseil
+      reviewLine: J'ai enfin chaud dans ce pays, merci pour vos conseils.
   - InitialSentence: Je vois, je vois, je vois, vous allez avoir...
     AvailableCards:
     - CharacterScore: 0
@@ -54,14 +54,14 @@ MonoBehaviour:
       Content: une influenceuse
       reviewLine: "C'est incroyable, j'ai d\xE9j\xE0 100 000 abonn\xE9s, on dirait
         que tout le monde adore voir quelqu'un qui se plaint tout le temps ! Merci
-        madame Irma"
+        madame Irma !"
     - CharacterScore: 0
       Content: une grande sportive
       reviewLine: "Bon, grande sportive, je ne crois pas... Je me suis foul\xE9 la
         cheville ! C'est honteux !"
     - CharacterScore: 5
       Content: une manequin
-      reviewLine: "Depuis que je mets en avant ma beaut\xE9, mais je ne gagne plus
-        ma vie\u2026 Si moi la plus belle femme sur terre ne peut pas en vivre, alors
+      reviewLine: "Depuis que je mets en avant ma beaut\xE9, je ne gagne plus ma
+        vie\u2026 Si moi, la plus belle femme sur terre, ne peut pas en vivre, alors
         qui le pourrait ? Des impostrices ?"
   <ReviewTresholds>k__BackingField: []
