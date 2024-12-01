@@ -649,17 +649,41 @@ PrefabInstance:
     m_TransformParent: {fileID: 859805414}
     m_Modifications:
     - target: {fileID: 2017574637969752551, guid: ab87b899a37147946a6c38561a332958, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478726210071904598, guid: ab87b899a37147946a6c38561a332958, type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5644393529260889914, guid: ab87b899a37147946a6c38561a332958, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7404588604615989143, guid: 9e606ef73497c7b4ba0c77adfbb8cfb7, type: 3}
+    - target: {fileID: 2017574637969752551, guid: ab87b899a37147946a6c38561a332958, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017574637969752551, guid: ab87b899a37147946a6c38561a332958, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189748198565107211, guid: ab87b899a37147946a6c38561a332958, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705823251190396968, guid: ab87b899a37147946a6c38561a332958, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705823251190396968, guid: ab87b899a37147946a6c38561a332958, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088324050198521406, guid: ab87b899a37147946a6c38561a332958, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088324050198521406, guid: ab87b899a37147946a6c38561a332958, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088324050198521406, guid: ab87b899a37147946a6c38561a332958, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8228541059705389305, guid: ab87b899a37147946a6c38561a332958, type: 3}
       propertyPath: m_Name
       value: ReviewSystem
