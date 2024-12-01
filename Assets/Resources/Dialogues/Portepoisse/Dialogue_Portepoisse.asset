@@ -12,4 +12,111 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4891941a97ef84dab49da7055caa4d, type: 3}
   m_Name: Dialogue_Portepoisse
   m_EditorClassIdentifier: 
-  <DialogueWaves>k__BackingField: []
+  <DialogueWaves>k__BackingField:
+  - Lines:
+    - Text: "Comment allez-vous aujourd\u2019hui ?"
+      isPlayerTalking: 1
+      NextLineDelay: 1
+      AudioFile: {fileID: 8300000, guid: 26021d1731794964889b17c1c3f3613c, type: 3}
+    - Text: "\xC7a roule. Enfin, si on oublie les pigeons qui m\u2019ont vol\xE9
+        ma derni\xE8re tartine."
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 8300000, guid: a5388906371d26f4aae0b271168564a8, type: 3}
+  - Lines:
+    - Text: "Oui, je vois\u2026 des voleurs ail\xE9s. Une injustice. Mais aussi\u2026
+        une id\xE9e, une r\xE9bellion qui gronde."
+      isPlayerTalking: 1
+      NextLineDelay: 4
+      AudioFile: {fileID: 8300000, guid: 88a487da3764933439d3b62556e79dd1, type: 3}
+    - Text: "Une r\xE9bellion contre les pigeons ? Mouai... mais je vise plus gros."
+      isPlayerTalking: 0
+      NextLineDelay: 1.3
+      AudioFile: {fileID: 8300000, guid: b43611ed206b86a4383135f45fc7b9bf, type: 3}
+  - Lines:
+    - Text: "Oui, je vois\u2026 quelque chose de plus grand. Peut-\xEAtre\u2026 une
+        arm\xE9e ?"
+      isPlayerTalking: 1
+      NextLineDelay: 4
+      AudioFile: {fileID: 8300000, guid: fd2122b539cb3dc43a0da2b03f8e9bf8, type: 3}
+    - Text: "Une arm\xE9e\u2026 ouais, genre une bande de rebelles. Mais pas pour
+        les pigeons, hein, pour le monde entier. On casserait les r\xE8gles, on vivrait
+        comme des oufs..."
+      isPlayerTalking: 0
+      NextLineDelay: 2
+      AudioFile: {fileID: 8300000, guid: dfdf0def367b17146a0fdbe2003574ac, type: 3}
+  - Lines:
+    - Text: "Oui, je vois\u2026 des cris, des chants\u2026 et un projet colossal\u2026"
+      isPlayerTalking: 1
+      NextLineDelay: 3
+      AudioFile: {fileID: 8300000, guid: ccbb347e93d7240458d8e663cee2b10c, type: 3}
+    - Text: La statue ! Vous voyez la statue ?
+      isPlayerTalking: 1
+      NextLineDelay: 1
+      AudioFile: {fileID: 8300000, guid: 5e86b6de75726e6479fa720fefeeab32, type: 3}
+  - Lines:
+    - Text: "Oui, je vois\u2026 quelque chose d\u2019imposant, peut-\xEAtre\u2026"
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 8300000, guid: cebb503796dce4e408a91ae412713b5d, type: 3}
+    - Text: "Exactement ! Et un poing g\xE9ant, pour que tout le monde sache qui
+        commande. Mais bon, pour \xE7a, il me faut un paquet de fric."
+      isPlayerTalking: 0
+      NextLineDelay: 1.3
+      AudioFile: {fileID: 8300000, guid: 1b804c8b32c068f4ea3a21fd23d5b9dc, type: 3}
+  - Lines:
+    - Text: "Oui, je vois\u2026 un sac de pi\xE8ces, une pluie d\u2019opportunit\xE9s.
+        Peut-\xEAtre m\xEAme\u2026 une ch\xE8vre dor\xE9e."
+      isPlayerTalking: 1
+      NextLineDelay: 4
+      AudioFile: {fileID: 8300000, guid: d1bd97147e7952b418a8ee0bff57cd10, type: 3}
+    - Text: "Une ch\xE8vre dor\xE9e ?"
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 8300000, guid: b08c7ecedd1d0be45b5c09cb1c424e31, type: 3}
+  - Lines:
+    - Text: "Oui, je vois\u2026 ou peut-\xEAtre une grenouille. Le message est flou."
+      isPlayerTalking: 1
+      NextLineDelay: 5
+      AudioFile: {fileID: 8300000, guid: 5d2c2923be3a91047a2ed687ef0b544c, type: 3}
+    - Text: "Attends\u2026 c\u2019est quoi \xE7a ?"
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 8300000, guid: 28d56e6f0cbb7004fb200652de3001ae, type: 3}
+  - Lines:
+    - Text: Oui, je vois... C'est des travaux. Ils refond la rue.
+      isPlayerTalking: 1
+      NextLineDelay: 6.5
+      AudioFile: {fileID: 8300000, guid: 88eab42c00e6bfe418fbb81150ba4856, type: 3}
+    - Text: "Mais c\u2019est g\xE9nial ! Ce bruit, ces vibrations ! On dirait une
+        d\xE9claration de guerre !"
+      isPlayerTalking: 0
+      NextLineDelay: 2
+      AudioFile: {fileID: 8300000, guid: eb5efc61e0b733e41a7c827be71e8d67, type: 3}
+  - Lines:
+    - Text: "Oui, je vois\u2026 une interpr\xE9tation audacieuse. "
+      isPlayerTalking: 1
+      NextLineDelay: 9
+      AudioFile: {fileID: 8300000, guid: 40e0b5097b62f084baaffe356512a487, type: 3}
+    - Text: "J\u2019adore. C\u2019est comme un hymne punk industriel. S\xE9rieux,
+        on devrait embaucher ces gars l\xE0 pour ma statue."
+      isPlayerTalking: 0
+      NextLineDelay: 2
+      AudioFile: {fileID: 8300000, guid: 12889bcab7d90c24a9dd4b4952be43de, type: 3}
+  - Lines:
+    - Text: "Oui, je vois\u2026 des b\xE2tisseurs, des cr\xE9ateurs d\u2019un nouveau
+        monde."
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 8300000, guid: e183f0eff0170c149b0adbe48b48d3cd, type: 3}
+    - Text: "Exactement ! Et s\u2019ils peuvent construire une statue qui tremble
+        au rythme des marteaux piqueurs, ce serait encore mieux.  Dites moi quel
+        est mon avenir."
+      isPlayerTalking: 0
+      NextLineDelay: 0.8
+      AudioFile: {fileID: 8300000, guid: 13836b4ae20d8464f84cc4f27716da7a, type: 3}
+    - Text: "Oui, je vois\u2026 Les r\xE9ponses sont souvent d\xE9j\xE0 l\xE0. Vous
+        les connaissez. Mon r\xF4le est seulement de les r\xE9v\xE9ler."
+      isPlayerTalking: 1
+      NextLineDelay: 2.7
+      AudioFile: {fileID: 8300000, guid: 5c4f35e66c43ce74f9766520e8a76cb2, type: 3}
