@@ -70,6 +70,7 @@ public class EncounterManager : MonoBehaviour
     public void StartEncounter(CustomerData customerData, GameObject customer)
     {
         reviewContent = "";
+        currentQuestionIndex = 0;
 
         print("Encounter started with " + customerData.ToString());
 
@@ -114,13 +115,13 @@ public class EncounterManager : MonoBehaviour
         {
             // Instantiate the cards around the center of the screen (one card at the center, one on the left, one on the right)
             var card = tarotCards[i] == null ? Instantiate(tarotCardPrefab, new Vector3((i - 1) * cardSpacing, 0, 0), Quaternion.identity, transform) : tarotCards[i];
+            tarotCards[i] = card;
 
-            card.InitiateCard(question.AvailableCards[i], () => StartCoroutine(OnCardClicked(card)), faceDown: true);
             card.gameObject.SetActive(true);
+            card.InitiateCard(question.AvailableCards[i], () => StartCoroutine(OnCardClicked(card)), faceDown: true);
 
             if (i == question.AvailableCards.Length - 1) card.FlipCard(3, () => cardSelected = false);
             else card.FlipCard(3);
-            tarotCards[i] = card;
         }
     }
 

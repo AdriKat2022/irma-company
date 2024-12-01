@@ -30,15 +30,6 @@ public class DialogueManager : MonoBehaviour
         isPlayerTalkings = new Queue<bool>();
         nextLineDelays = new Queue<float>();
         audioFiles = new Queue<AudioClip>();
-        dialogue = customerData.Dialogue;
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            //StartDialogue(() => print("Dialogue ended")) ;
-        }
     }
 
     public void SetNewDialogue(Dialogue dialogue)
