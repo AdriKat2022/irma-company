@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
         {
             isInputLocked = true; 
             Debug.Log("Escape key pressed");
-
+            AudioManager.Instance.PlaySoundEffect(AudioManager.Instance.pauseClickSound);
             if (gameIsPaused)
             {
                 Debug.Log("Game is paused, resuming...");
@@ -30,6 +30,7 @@ public class PauseMenu : MonoBehaviour
             
             Invoke("UnlockInput", 0.2f); 
         }
+
     }
 
     private void UnlockInput()
@@ -39,6 +40,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Paused()
     {
+        AudioManager.Instance.TooglePauseMusic(false);
         AudioManager.Instance.TooglePauseVoice(false);
         Debug.Log("Entering paused state");
         pauseMenuUI.SetActive(true); // Activer notre menu pause et l'afficher
@@ -48,6 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        AudioManager.Instance.TooglePauseMusic(true);
         AudioManager.Instance.TooglePauseVoice(true);
         Debug.Log("Exiting paused state");
         pauseMenuUI.SetActive(false);

@@ -5,6 +5,11 @@ public class MainMenu : MonoBehaviour
 {
     public string LevelToLoad; 
     public GameObject SettingsWindow;
+
+    void Start()
+    {
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.menuMusic);
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(LevelToLoad);

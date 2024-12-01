@@ -50,13 +50,13 @@ MonoBehaviour:
   musicSource: {fileID: 7139254575696919441}
   soundEffectSource: {fileID: 1345063556901474397}
   voiceSource: {fileID: 4547437272522188146}
-  menuMusic: {fileID: 0}
-  gameThemeMusic: {fileID: 0}
-  googleReviewMusic: {fileID: 0}
-  cardHoverSound: {fileID: 0}
-  soundClickSound: {fileID: 0}
-  pauseClickSound: {fileID: 0}
-  divinationBeginSound: {fileID: 0}
+  menuMusic: {fileID: 8300000, guid: fa7067c02795116469c013d5c19ef94f, type: 3}
+  gameThemeMusic: {fileID: 8300000, guid: fe8a83d17afbfaf46973e6c3634dc74d, type: 3}
+  googleReviewMusic: {fileID: 8300000, guid: 65ae24b20fa29be4194debc4a2f37168, type: 3}
+  cardHoverSound: {fileID: 8300000, guid: 9a4240bddded46a4eb5784dce0d2462e, type: 3}
+  soundClickSound: {fileID: 8300000, guid: 36316d66457c9a342a25170131e3229a, type: 3}
+  pauseClickSound: {fileID: 8300000, guid: 03225fb6564d23f449db4c066c95e831, type: 3}
+  divinationBeginSound: {fileID: 8300000, guid: 3c537ba969df4ae4fba70bf88623cfb1, type: 3}
 --- !u!1 &284255311049910501
 GameObject:
   m_ObjectHideFlags: 0

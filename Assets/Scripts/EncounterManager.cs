@@ -5,9 +5,9 @@ using UnityEngine;
 public enum EncounterState
 {
     Intro, // Introduction de l'encounter
-    InDialogue, // Inspection possible en parallèle du dialogue
+    InDialogue, // Inspection possible en parallï¿½le du dialogue
     Divination, // Phase de divination on peut choisir parmi trois cartes
-    Outro // la carte a été choisie, on affiche le résultat
+    Outro // la carte a ï¿½tï¿½ choisie, on affiche le rï¿½sultat
 }
 
 public class EncounterManager : MonoBehaviour
@@ -46,9 +46,11 @@ public class EncounterManager : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.gameThemeMusic);
         tarotCards = new TarotCard[3];
         StartEncounter(customerData, customer);
     }
+
 
     public void StartEncounter()
     {
@@ -77,7 +79,7 @@ public class EncounterManager : MonoBehaviour
         if (isConfirmed)
         {
             confirmPopup.SetActive(false);
-            // TODO: Make sound effect
+            
             ContinueDivinationPhase();
         }
     }
@@ -86,6 +88,10 @@ public class EncounterManager : MonoBehaviour
     {
         // TODO: Call this method when the player confirms to enter the divination phase
         print("Divination phase continue");
+
+        AudioManager.Instance.TooglePauseMusic(false);
+        AudioManager.Instance.TooglePauseVoice(false);
+        AudioManager.Instance.PlaySoundEffect(AudioManager.Instance.divinationBeginSound);
 
         currentState = EncounterState.Divination;
 
