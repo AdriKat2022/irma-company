@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class ReviewNotification : MonoBehaviour
 {
-    [Header("Settings")]
-    [SerializeField] private float reviewSpeed = 1f;
-
     [Header("References")]
     [SerializeField] private Image profilePicture;
     [SerializeField] private Image numberOfStarsPicture;
@@ -21,8 +18,8 @@ public class ReviewNotification : MonoBehaviour
 
     private void Start()
     {
-        profilePicture.rectTransform.position = new Vector3(-750f, 350f, 0);
-        numberOfStarsPicture.rectTransform.position = new Vector3(-300f, 250f, 0);
+        //profilePicture.rectTransform.position = new Vector3(-750f, 350f, 0);
+        //numberOfStarsPicture.rectTransform.position = new Vector3(-300f, 250f, 0);
     }
 
     public void InitializeNotification(Sprite profilePicture, string username, int nbOfStars)
@@ -36,12 +33,6 @@ public class ReviewNotification : MonoBehaviour
     public void MakeReview(string content)
     {
         contentText.text = content;
-    }
-
-    private IEnumerator AnimateReview()
-    {
-        // Animate in the coroutine or make an animator for the review notification
-        yield return null;
     }
 
     private void getNumberOfStars()
