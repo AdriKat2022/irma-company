@@ -17,102 +17,102 @@ MonoBehaviour:
     - Text: "Comment allez-vous aujourd\u2019hui ?"
       isPlayerTalking: 1
       NextLineDelay: 1
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: 70a808dba7bc0004db6af1649b21e88a, type: 3}
     - Text: Il fait froid ici, vous avez mis le chauffage ?
       isPlayerTalking: 0
       NextLineDelay: 1
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: 6ead313c843ca5c478753d9415b9262f, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026 une sensation\u2026 glaciale, une envie de chaleur,
         de bien-\xEAtre."
       isPlayerTalking: 1
-      NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      NextLineDelay: 3.5
+      AudioFile: {fileID: 8300000, guid: cdf4c1b366f347446be81aae3d209e0a, type: 3}
     - Text: "Glaciale ? C\u2019est carr\xE9ment une chambre froide, ici !"
       isPlayerTalking: 0
       NextLineDelay: 1
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: 4d1c105e547084743a4030e24c953cbf, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026 vous recherchez quelque chose de plus\u2026 chaleureux,
         des fruits tropicaux dans un march\xE9 exotique\u2026 avec des poissons\u2026
         qui volent."
       isPlayerTalking: 1
       NextLineDelay: 4
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: 5478f8e27f2b7d64c9e568df43390c6e, type: 3}
     - Text: Des poissons qui volent ?
       isPlayerTalking: 0
       NextLineDelay: 0.8
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: a57ac01bfdd78be4a80d068052b0bfed, type: 3}
   - Lines:
-    - Text: "Oui, dans un sens\u2026 spirituel. Vous voyez, tout est possible."
+    - Text: "Oui, je vois... dans un sens\u2026 spirituel. Vous voyez, tout est possible."
       isPlayerTalking: 1
-      NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      NextLineDelay: 4
+      AudioFile: {fileID: 8300000, guid: aa33bd1f982e65b41a8566001ee00da8, type: 3}
     - Text: "Une notification ?! Attendez\u2026 un like. C\u2019est un like !"
       isPlayerTalking: 0
-      NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      NextLineDelay: 3
+      AudioFile: {fileID: 8300000, guid: ca1788a0419b3804bab4327ab7dac3f1, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026 une lumi\xE8re dans le d\xE9sert num\xE9rique."
-      isPlayerTalking: 0
+      isPlayerTalking: 1
       NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: de01bd15dad232c43b1ed94d21974b70, type: 3}
     - Text: "Vous vous rendez compte ? \xC7a fait deux semaines que personne n\u2019a
         rien lik\xE9 !"
       isPlayerTalking: 0
       NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: e665754ca972df14dad38ae857c9c54d, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026 un public qui commence \xE0 tendre l\u2019oreille.
         Mais\u2026 doucement. Trop de likes d\u2019un coup pourrait d\xE9s\xE9quilibrer
         l\u2019univers."
       isPlayerTalking: 1
       NextLineDelay: 4
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: 7d234ad4a8e06ea49926bf7e1457fc01, type: 3}
     - Text: Vous croyez ? Je devrais limiter mes posts ?
       isPlayerTalking: 0
       NextLineDelay: 1
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: d857ed80533485849af1d2508b6a7bd1, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026 une publication par pleine lune. Et\u2026 ne sous-estimez
         jamais le pouvoir des hashtags."
       isPlayerTalking: 1
-      NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      NextLineDelay: 3
+      AudioFile: {fileID: 8300000, guid: 71f3d6ddf8771a741a5132359294cd76, type: 3}
     - Text: "Vous \xEAtes une g\xE9nie."
       isPlayerTalking: 0
-      NextLineDelay: 0.8
-      AudioFile: {fileID: 0}
+      NextLineDelay: 1
+      AudioFile: {fileID: 8300000, guid: 76fae2d73b73d0b4d87435eace74f01f, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026"
       isPlayerTalking: 1
       NextLineDelay: 1
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: 7995353688c3e384eacd97fc571a1498, type: 3}
     - Text: 'Mais au fait, de quoi parlions nous ? '
       isPlayerTalking: 0
-      NextLineDelay: 1
-      AudioFile: {fileID: 0}
+      NextLineDelay: 0.8
+      AudioFile: {fileID: 8300000, guid: a7dacaa1914edd840b3bb4d387557d1a, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026 des plages infinies, des sourires chaleureux\u2026
         et des moustiques g\xE9ants."
       isPlayerTalking: 1
       NextLineDelay: 3
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: 0ba8d5c3e50d0d849b1d454ec8f826ae, type: 3}
     - Text: Des moustiques ?
       isPlayerTalking: 0
       NextLineDelay: 0.5
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: b86bdfca3ae2d7945b5a3d9d09c5887a, type: 3}
   - Lines:
-    - Text: "Spirituels, bien s\xFBr. Tout comme les poissons. "
+    - Text: "Oui, je vois... Spirituels, bien s\xFBr. Tout comme les poissons. "
       isPlayerTalking: 1
-      NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      NextLineDelay: 3
+      AudioFile: {fileID: 8300000, guid: d7d7bd817d0dabe4aaa770640918abd6, type: 3}
     - Text: Que voyez vous vraiment ?
       isPlayerTalking: 0
       NextLineDelay: 1
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: 11119d86add3db749999edb6928d72c7, type: 3}
     - Text: "Oui, je vois\u2026 Les r\xE9ponses sont souvent d\xE9j\xE0 l\xE0. Vous
         les connaissez. Mon r\xF4le est seulement de les r\xE9v\xE9ler..."
       isPlayerTalking: 1
       NextLineDelay: 3
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: ca82087fd25c5534382f8ddf5933e557, type: 3}

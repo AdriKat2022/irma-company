@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     public void OnEndEncounter()
     {
-        if (customerDataList.Length < maxCaracterCount)
+        if (currentCaracterCount < maxCaracterCount)
         {
             encounterManager.StartEncounter(customerDataList[currentCaracterCount], customerList[currentCaracterCount]);
             currentCaracterCount++;

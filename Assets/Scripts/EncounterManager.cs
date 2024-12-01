@@ -32,6 +32,8 @@ public class EncounterManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField]
+    private GameManager gameManager;
+    [SerializeField]
     private DialogueManager dialogueManager;
     [SerializeField]
     private TextMeshProUGUI sentenceText;
@@ -48,11 +50,14 @@ public class EncounterManager : MonoBehaviour
     private TarotCard[] tarotCards;
     private bool cardSelected = true;
 
+    private string reviewContent;
+
     private void Start()
     {
+        // TODO: should be called by the game manager
         AudioManager.Instance.PlayMusic(AudioManager.Instance.gameThemeMusic);
         tarotCards = new TarotCard[3];
-        StartEncounter(customerData, customer);
+        //StartEncounter(customerData, customer);
     }
 
 
@@ -64,6 +69,8 @@ public class EncounterManager : MonoBehaviour
 
     public void StartEncounter(CustomerData customerData, GameObject customer)
     {
+        reviewContent = "";
+
         print("Encounter started with " + customerData.ToString());
 
         this.customerData = customerData;
@@ -122,7 +129,7 @@ public class EncounterManager : MonoBehaviour
         if (cardSelected) yield break;
 
         cardSelected = true;
-
+        reviewContent += card.CardData.reviewLine + "\n";
         StartCoroutine(FlipAllCards());
         print("The card was clicked " + card.CardData.Content + " that gives " + card.CardData.CharacterScore);
     }
@@ -137,11 +144,7 @@ public class EncounterManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        //foreach (var card in tarotCards)
-        //{
-        //    card.gameObject.SetActive(false);
-        //    yield return new WaitForSeconds(0.35f);
-        //}
+        
 
         currentQuestionIndex++;
         if (currentQuestionIndex < customerData.Questions.Length)
@@ -150,6 +153,12 @@ public class EncounterManager : MonoBehaviour
         }
         else
         {
+            foreach (var card in tarotCards)
+            {
+                card.gameObject.SetActive(false);
+                yield return new WaitForSeconds(0.35f);
+            }
+
             currentState = EncounterState.Outro;
             print("The encounter is over");
             yield return new WaitForSeconds(delayBeforeReveal);
@@ -158,8 +167,13 @@ public class EncounterManager : MonoBehaviour
             // TODO: Display the review
             // Inform the game manager that the encounter is over
 
-            notification.InitializeNotification();
-            notification.MakeReview();
+            notification.gameObject.SetActive(true);
+            notification.InitializeNotification(customerData.ProfilePicture, customerData.Username, 3, reviewContent);
+
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+
+            notification.gameObject.SetActive(false);
+            gameManager.OnEndEncounter();
         }
     }
 

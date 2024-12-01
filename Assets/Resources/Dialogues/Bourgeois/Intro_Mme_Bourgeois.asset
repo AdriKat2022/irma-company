@@ -17,4 +17,4 @@ MonoBehaviour:
     - Text: Bonjour, Madame.
       isPlayerTalking: 0
       NextLineDelay: 1
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: 75065cad26124bb4e85b8d8e4b17d538, type: 3}
