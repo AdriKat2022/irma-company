@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            StartDialogue(() => print("Dialogue ended")) ;
+            //StartDialogue(() => print("Dialogue ended")) ;
         }
     }
 

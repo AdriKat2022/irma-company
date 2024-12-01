@@ -16,7 +16,54 @@ MonoBehaviour:
   <CharacterSprite>k__BackingField: {fileID: 0}
   <Username>k__BackingField: 
   <ProfilePicture>k__BackingField: {fileID: 0}
-  <IntroDialogue>k__BackingField: {fileID: 0}
-  <Dialogue>k__BackingField: {fileID: 0}
-  <Questions>k__BackingField: []
+  <IntroDialogue>k__BackingField: {fileID: 11400000, guid: c2167e06cb1cc874e9eb01fb2e94aff0, type: 2}
+  <Dialogue>k__BackingField: {fileID: 11400000, guid: 337464a7346faf848b2317764dec9640, type: 2}
+  <Questions>k__BackingField:
+  - InitialSentence: "Je vois, je vois, je vois, vous allez \xE9lire r\xE9sidence..."
+    AvailableCards:
+    - CharacterScore: 5
+      Content: aux USA
+      reviewLine: "Enfin un pays o\xF9 je peux aller \xE0 l'\xE9cole avec mon AK-47
+        pr\xE9f\xE9r\xE9 !"
+    - CharacterScore: 0
+      Content: en Chine
+      reviewLine: "Je suis pas convaincu par la Chine. La libert\xE9 est inexistante.
+        C'est trop calme, trop contr\xF4l\xE9. Pas mon genre du tout."
+    - CharacterScore: 10
+      Content: en Australie
+      reviewLine: "Enfin un endroit qui me comprend. L'Australie, c'est la vraie
+        libert\xE9 : des \xE9tendues infinies, des paysages qui hurlent la r\xE9bellion.
+        Ici, m\xEAme le d\xE9sert a du caract\xE8re. Je me sens chez moi."
+  - InitialSentence: Je vois, je vois, je vois, vous allez...
+    AvailableCards:
+    - CharacterScore: 10
+      Content: devenir riche
+      reviewLine: "Gr\xE2ce \xE0 vos pr\xE9dictions, je suis devenue riche ! Et gr\xE2ce
+        \xE0 \xE7a, j'ai pu financer LE projet. Ma r\xE9bellion a r\xE9ussi, le syst\xE8me
+        est \xE0 genoux. Une vraie visionnaire !"
+    - CharacterScore: 0
+      Content: vous marier
+      reviewLine: "En plus, je me suis mari\xE9e... et j\u2019ai d\xE9j\xE0 pr\xE9par\xE9
+        mon discours de rupture. Pas pr\xEAte de remettre une bague \xE0 ce doigt.
+        \U0001F595"
+    - CharacterScore: 5
+      Content: "d\xE9m\xE9nager"
+      reviewLine: "Super d\xE9m\xE9nagement... enfin un peu de changement, m\xEAme
+        si j'aimais plut\xF4t bien mon squat aux murs tagu\xE9s. Merci Irma, on fera
+        avec !"
+  - InitialSentence: Je vois, je vois, je vois, vous serez...
+    AvailableCards:
+    - CharacterScore: 5
+      Content: peintre
+      reviewLine: "\xCAtre peintre, c\u2019est comme foutre le bordel avec des couleurs.
+        La ville c'est mon terrain de jeu. C'est une marque de mur Banksy ?"
+    - CharacterScore: 10
+      Content: architecte
+      reviewLine: "Et maintenant, architecte ? Pas mon d\xE9lire. Mais une statue
+        g\xE9ante, \xE7a, c\u2019est carr\xE9ment mon style. La ville est \xE0 moi,
+        et elle le sait maintenant. "
+    - CharacterScore: 0
+      Content: avocat
+      reviewLine: "Avocat ? S\xE9rieusement ? J\u2019ai essay\xE9, c\u2019est aussi
+        d\xE9gueu que le syst\xE8me."
   <ReviewTresholds>k__BackingField: []

@@ -27,6 +27,8 @@ public class EncounterManager : MonoBehaviour
     private float delayBeforeBackgroundDialogue = 1.5f;
     [SerializeField]
     private float delayBeforeReveal = 2f;
+    [SerializeField]
+    private float delayBeforeReview = 2f;
 
     [Header("References")]
     [SerializeField]
@@ -42,7 +44,7 @@ public class EncounterManager : MonoBehaviour
 
     private EncounterState currentState = EncounterState.Intro;
     private TarotCard[] tarotCards;
-    private bool cardSelected = false;
+    private bool cardSelected = true;
 
     private void Start()
     {
@@ -86,7 +88,6 @@ public class EncounterManager : MonoBehaviour
 
     public void ContinueDivinationPhase()
     {
-        // TODO: Call this method when the player confirms to enter the divination phase
         print("Divination phase continue");
 
         AudioManager.Instance.TooglePauseMusic(false);
@@ -97,17 +98,19 @@ public class EncounterManager : MonoBehaviour
 
         var question = customerData.Questions[currentQuestionIndex];
 
+        // TODO: Display the sentence to complete
+
+        // Display the tarot cards
         for (int i = 0; i < question.AvailableCards.Length; i++)
         {
             // Instantiate the cards around the center of the screen (one card at the center, one on the left, one on the right)
             var card = tarotCards[i] == null ? Instantiate(tarotCardPrefab, new Vector3((i - 1) * cardSpacing, 0, 0), Quaternion.identity, transform) : tarotCards[i];
 
-            card.InitiateCard(question.AvailableCards[i], () => StartCoroutine(OnCardClicked(card)), true);
+            card.InitiateCard(question.AvailableCards[i], () => StartCoroutine(OnCardClicked(card)), faceDown: true);
             card.gameObject.SetActive(true);
 
-            if (i == question.AvailableCards.Length - 1) card.FlipCard(2, () => cardSelected = false);
-            else card.FlipCard(2)
-                    ;
+            if (i == question.AvailableCards.Length - 1) card.FlipCard(3, () => cardSelected = false);
+            else card.FlipCard(3);
             tarotCards[i] = card;
         }
     }
@@ -118,7 +121,6 @@ public class EncounterManager : MonoBehaviour
 
         cardSelected = true;
 
-        yield return new WaitForSeconds(delayBeforeReveal);
         StartCoroutine(FlipAllCards());
         print("The card was clicked " + card.CardData.Content + " that gives " + card.CardData.CharacterScore);
     }
@@ -133,11 +135,11 @@ public class EncounterManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        foreach (var card in tarotCards)
-        {
-            card.gameObject.SetActive(false);
-            yield return new WaitForSeconds(0.35f);
-        }
+        //foreach (var card in tarotCards)
+        //{
+        //    card.gameObject.SetActive(false);
+        //    yield return new WaitForSeconds(0.35f);
+        //}
 
         currentQuestionIndex++;
         if (currentQuestionIndex < customerData.Questions.Length)
@@ -147,6 +149,12 @@ public class EncounterManager : MonoBehaviour
         else
         {
             currentState = EncounterState.Outro;
+            print("The encounter is over");
+            yield return new WaitForSeconds(delayBeforeReveal);
+            customer.SetActive(false);
+            yield return new WaitForSeconds(delayBeforeReview);
+            // TODO: Display the review
+            // Inform the game manager that the encounter is over
         }
     }
 
