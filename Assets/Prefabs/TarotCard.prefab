@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabf7a95f22c9b14bad4fc3cc9dd7aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontSprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  backSprite: {fileID: -6108374257168641547, guid: c630f57b7cfe1d244adb72847d8f2548, type: 3}
+  frontSprite: {fileID: -6588362952938498367, guid: fd87e224ed77b5c489b1fe0a8e77672f, type: 3}
+  backSprite: {fileID: -425282376844011726, guid: e64a829e1cab9524bacfa279b72a96df, type: 3}
   flipDuration: 0.5
   cardText: {fileID: 7543031658644482031}
 --- !u!114 &3920780537335656771
