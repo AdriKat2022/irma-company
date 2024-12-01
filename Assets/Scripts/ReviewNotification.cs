@@ -19,10 +19,10 @@ public class ReviewNotification : MonoBehaviour
         usernameText.text = username;
         numberOfStars = nbOfStars;
         contentText.text = content;
-        getNumberOfStars();
+        GetNumberOfStars();
     }
 
-    private void getNumberOfStars()
+    private void GetNumberOfStars()
     {
         numberOfStarsPicture = Resources.Load("Assets/Resources/Images/Review/{$numberOfStars}etoile.png") as Image;
     }

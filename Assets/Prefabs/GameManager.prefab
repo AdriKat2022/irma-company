@@ -45,5 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterManager: {fileID: 0}
-  customerDataList: []
-  customerList: []
+  customerDataList:
+  - {fileID: 11400000, guid: 3412d6ac7e8d6f943ae74f8b0f6cca4a, type: 2}
+  - {fileID: 11400000, guid: c21ddd0572265ad4c89eb3a65dcdbc2f, type: 2}
+  - {fileID: 11400000, guid: 93e8249e9fc3b5c40841f39e0eb59cc1, type: 2}
+  customerList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
