@@ -115,7 +115,8 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence, float nextLineDelay, AudioClip audioFile, Action onDialogueComplete = null)
     {
-        AudioManager.Instance.PlaySoundEffect(audioFile);
+        AudioManager.Instance.PlayVoice(audioFile);
+
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {

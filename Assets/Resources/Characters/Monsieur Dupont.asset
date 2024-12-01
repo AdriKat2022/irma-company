@@ -19,14 +19,48 @@ MonoBehaviour:
   <IntroDialogue>k__BackingField: {fileID: 11400000, guid: 6e79696f80004b043aa9220f06c80005, type: 2}
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 2d38b431765b254498f7e23fcf930ed2, type: 2}
   <Questions>k__BackingField:
-  - InitialSentence: Vous aller devenir...
+  - InitialSentence: "Je vois, je vois, je vois, vous allez \xE9lire r\xE9sidence..."
     AvailableCards:
-    - CharacterScore: 3
-      Content: un barman
     - CharacterScore: 10
-      Content: un coach de gym
+      Content: au Japon
+      reviewLine: "Incroyable ce pays, ARIGAT\xD4 GOZAIMASU !"
+    - CharacterScore: 5
+      Content: au Mexique
+      reviewLine: "Les temples Maya sont superbes mais j'avoue que je me sens pas
+        en s\xE9curit\xE9 avec les cartels."
     - CharacterScore: 0
-      Content: un boulanger
+      Content: en Russie
+      reviewLine: Ce pays est merdique, il fait trop froid, et il n'y a rien. Ne
+        venez pas.
+  - InitialSentence: Je vois, je vois, je vois, vous allez devenir...
+    AvailableCards:
+    - CharacterScore: 5
+      Content: "un b\xE9b\xE9"
+      reviewLine: "Et puis, elle m'a pr\xE9dit un enfant mais je n'ai m\xEAme pas
+        de de copine. A moins que la pr\xE9diction soit sur le b\xE9b\xE9 qui \xE9t\xE9
+        derri\xE8re moi pendant tout le vol."
+    - CharacterScore: 10
+      Content: un animal
+      reviewLine: "D\u2019ailleurs, gr\xE2ce \xE0 Irma, j'ai trouv\xE9 juste apr\xE8s
+        la s\xE9ance un chiot que j'ai adopt\xE9."
+    - CharacterScore: 0
+      Content: "un grand succ\xE8s"
+      reviewLine: "Au passage, vous m'avez pr\xE9dit un grand succ\xE8s, mais je
+        suis introverti, je n'ai pas envie d'\xEAtre mis sur le devant de la sc\xE8ne..."
+  - InitialSentence: Je vois, je vois, je vois, vous allez devenir...
+    AvailableCards:
+    - CharacterScore: 5
+      Content: un pompier
+      reviewLine: "Bon, pompier est un bon m\xE9tier, car je fait du sport mais ma
+        boussole ne me sert \xE0 rien."
+    - CharacterScore: 10
+      Content: un militaire
+      reviewLine: "Etre militaire c'est surement le meilleur conseil que j'ai eu,
+        je peux enfin tirer sur des gens, et \xE7a a un vrai impacte."
+    - CharacterScore: 0
+      Content: "un \xE9crivain"
+      reviewLine: "Malheureusement je vois mes muscles qui fondent \xE0 vu d'\u0153il,
+        \xE0 force de rester dans ce fauteuil \xE0 \xE9crire des livres."
   <ReviewTresholds>k__BackingField:
   - RequiredScore: 0
     ReviewText: trop nul

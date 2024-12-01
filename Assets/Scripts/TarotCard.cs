@@ -51,6 +51,9 @@ public class TarotCard : MonoBehaviour
         }
     }
 
+    // Flip the card 180 degrees and change the sprite. Repeat the process if needed.
+    // An odd number of repeats will end with the card in the other way.
+    // An even number of repeats will end with the card in the same way.
     private IEnumerator Flip(int repeat = 1, Action onFlipFinished = null)
     {
         isFlipping = true;
@@ -58,13 +61,14 @@ public class TarotCard : MonoBehaviour
         for (int i = 0; i < repeat; i++)
         {
             float time = 0;
-            Vector3 scale = transform.localScale;
-            Vector3 targetScale = new Vector3(0, scale.y, scale.z);
+            float halfDuration = flipDuration / 2;
+            Quaternion startRotation = transform.rotation;
+            Quaternion endRotation = Quaternion.Euler(0, 180, 0) * startRotation;
 
-            while (time < flipDuration)
+            while (time < halfDuration)
             {
                 time += Time.deltaTime;
-                transform.localScale = Vector3.Lerp(scale, targetScale, time / flipDuration);
+                transform.rotation = Quaternion.Slerp(startRotation, endRotation, time / halfDuration);
                 yield return null;
             }
 
@@ -72,13 +76,13 @@ public class TarotCard : MonoBehaviour
             isFaceDown = !isFaceDown;
 
             time = 0;
-            scale = transform.localScale;
-            targetScale = new Vector3(1, scale.y, scale.z);
+            startRotation = transform.rotation;
+            endRotation = Quaternion.Euler(0, 180, 0) * startRotation;
 
-            while (time < flipDuration)
+            while (time < halfDuration)
             {
                 time += Time.deltaTime;
-                transform.localScale = Vector3.Lerp(scale, targetScale, time / flipDuration);
+                transform.rotation = Quaternion.Slerp(startRotation, endRotation, time / halfDuration);
                 yield return null;
             }
         }
