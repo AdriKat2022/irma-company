@@ -12,4 +12,111 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4891941a97ef84dab49da7055caa4d, type: 3}
   m_Name: Dialogue_Portepoisse
   m_EditorClassIdentifier: 
-  <DialogueWaves>k__BackingField: []
+  <DialogueWaves>k__BackingField:
+  - Lines:
+    - Text: "Comment allez-vous aujourd\u2019hui ?"
+      isPlayerTalking: 1
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+    - Text: "\xC7a roule. Enfin, si on oublie les pigeons qui m\u2019ont vol\xE9
+        ma derni\xE8re tartine."
+      isPlayerTalking: 0
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 des voleurs ail\xE9s. Une injustice. Mais aussi\u2026
+        une id\xE9e, une r\xE9bellion qui gronde."
+      isPlayerTalking: 1
+      NextLineDelay: 3
+      AudioFile: {fileID: 0}
+    - Text: "Une r\xE9bellion contre les pigeons ? Mouai... mais je vise plus gros."
+      isPlayerTalking: 0
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 quelque chose de plus grand. Peut-\xEAtre\u2026 une
+        arm\xE9e ?"
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: "Une arm\xE9e\u2026 ouais, genre une bande de rebelles. Mais pas pour
+        les pigeons, hein, pour le monde entier. On casserait les r\xE8gles, on vivrait
+        comme des oufs..."
+      isPlayerTalking: 0
+      NextLineDelay: 3
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 des cris, des chants\u2026 et un projet colossal\u2026"
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: La statue ! Vous voyez la statue ?
+      isPlayerTalking: 1
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 quelque chose d\u2019imposant, peut-\xEAtre\u2026"
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: "Exactement ! Et un poing g\xE9ant, pour que tout le monde sache qui
+        commande. Mais bon, pour \xE7a, il me faut un paquet de fric."
+      isPlayerTalking: 0
+      NextLineDelay: 3
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 un sac de pi\xE8ces, une pluie d\u2019opportunit\xE9s.
+        Peut-\xEAtre m\xEAme\u2026 une ch\xE8vre dor\xE9e."
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: "Une ch\xE8vre dor\xE9e ?"
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 ou peut-\xEAtre une grenouille. Le message est flou."
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: "Attends\u2026 c\u2019est quoi \xE7a ?"
+      isPlayerTalking: 0
+      NextLineDelay: 1
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: Oui, je vois... C'est des travaux. Ils refond la rue.
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: "Mais c\u2019est g\xE9nial ! Ce bruit, ces vibrations ! On dirait une
+        d\xE9claration de guerre !"
+      isPlayerTalking: 0
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 une interpr\xE9tation audacieuse. "
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: "J\u2019adore. C\u2019est comme un hymne punk industriel. S\xE9rieux,
+        on devrait embaucher ces gars l\xE0 pour ma statue."
+      isPlayerTalking: 0
+      NextLineDelay: 3
+      AudioFile: {fileID: 0}
+  - Lines:
+    - Text: "Oui, je vois\u2026 des b\xE2tisseurs, des cr\xE9ateurs d\u2019un nouveau
+        monde."
+      isPlayerTalking: 1
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: "Exactement ! Et s\u2019ils peuvent construire une statue qui tremble
+        au rythme des marteaux piqueurs, ce serait encore mieux.  Dites moi quel
+        est mon avenir."
+      isPlayerTalking: 0
+      NextLineDelay: 2
+      AudioFile: {fileID: 0}
+    - Text: "Oui, je vois\u2026 Les r\xE9ponses sont souvent d\xE9j\xE0 l\xE0. Vous
+        les connaissez. Mon r\xF4le est seulement de les r\xE9v\xE9ler."
+      isPlayerTalking: 1
+      NextLineDelay: 3
+      AudioFile: {fileID: 0}
