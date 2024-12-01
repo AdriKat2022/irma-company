@@ -77,7 +77,7 @@ MonoBehaviour:
   - Lines:
     - Text: "Oui, je vois\u2026 ou peut-\xEAtre une grenouille. Le message est flou."
       isPlayerTalking: 1
-      NextLineDelay: 2
+      NextLineDelay: 5
       AudioFile: {fileID: 8300000, guid: 5d2c2923be3a91047a2ed687ef0b544c, type: 3}
     - Text: "Attends\u2026 c\u2019est quoi \xE7a ?"
       isPlayerTalking: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   - Lines:
     - Text: Oui, je vois... C'est des travaux. Ils refond la rue.
       isPlayerTalking: 1
-      NextLineDelay: 2
+      NextLineDelay: 6.5
       AudioFile: {fileID: 8300000, guid: 88eab42c00e6bfe418fbb81150ba4856, type: 3}
     - Text: "Mais c\u2019est g\xE9nial ! Ce bruit, ces vibrations ! On dirait une
         d\xE9claration de guerre !"
@@ -96,27 +96,27 @@ MonoBehaviour:
   - Lines:
     - Text: "Oui, je vois\u2026 une interpr\xE9tation audacieuse. "
       isPlayerTalking: 1
-      NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      NextLineDelay: 9
+      AudioFile: {fileID: 8300000, guid: 40e0b5097b62f084baaffe356512a487, type: 3}
     - Text: "J\u2019adore. C\u2019est comme un hymne punk industriel. S\xE9rieux,
         on devrait embaucher ces gars l\xE0 pour ma statue."
       isPlayerTalking: 0
-      NextLineDelay: 3
-      AudioFile: {fileID: 0}
+      NextLineDelay: 2
+      AudioFile: {fileID: 8300000, guid: 12889bcab7d90c24a9dd4b4952be43de, type: 3}
   - Lines:
     - Text: "Oui, je vois\u2026 des b\xE2tisseurs, des cr\xE9ateurs d\u2019un nouveau
         monde."
       isPlayerTalking: 1
       NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      AudioFile: {fileID: 8300000, guid: e183f0eff0170c149b0adbe48b48d3cd, type: 3}
     - Text: "Exactement ! Et s\u2019ils peuvent construire une statue qui tremble
         au rythme des marteaux piqueurs, ce serait encore mieux.  Dites moi quel
         est mon avenir."
       isPlayerTalking: 0
-      NextLineDelay: 2
-      AudioFile: {fileID: 0}
+      NextLineDelay: 0.8
+      AudioFile: {fileID: 8300000, guid: 13836b4ae20d8464f84cc4f27716da7a, type: 3}
     - Text: "Oui, je vois\u2026 Les r\xE9ponses sont souvent d\xE9j\xE0 l\xE0. Vous
         les connaissez. Mon r\xF4le est seulement de les r\xE9v\xE9ler."
       isPlayerTalking: 1
-      NextLineDelay: 3
-      AudioFile: {fileID: 0}
+      NextLineDelay: 2.7
+      AudioFile: {fileID: 8300000, guid: 5c4f35e66c43ce74f9766520e8a76cb2, type: 3}
