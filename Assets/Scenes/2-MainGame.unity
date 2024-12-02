@@ -577,10 +577,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerData: {fileID: 11400000, guid: 93e8249e9fc3b5c40841f39e0eb59cc1, type: 2}
   customer: {fileID: 1486524307}
-  cardSpacing: 3
+  cardSpacing: 3.5
   delayBeforeDialogue: 1.5
   delayBeforeBackgroundDialogue: 1.5
-  delayBeforeReveal: 0
+  nextQuestionDelay: 2
+  cardsFlipStepDelay: 0.3
   delayBeforeReview: 2
   gameManager: {fileID: 605741769}
   dialogueManager: {fileID: 2106636784}

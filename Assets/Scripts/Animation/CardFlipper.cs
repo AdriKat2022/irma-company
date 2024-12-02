@@ -34,7 +34,7 @@ public class CardFlipper : MonoBehaviour
     
     public IEnumerator Flip(int repeat = 1, Action onFlipFinished = null)
     {
-        Debug.Log($"FLipping {repeat} times", gameObject);
+        Debug.Log($"Flipping {repeat} times", gameObject);
 
         if (isFlipping)
         {
@@ -48,6 +48,7 @@ public class CardFlipper : MonoBehaviour
         }
 
         isFlipping = false;
+        Debug.Log("Flip Finished", gameObject);
         onFlipFinished?.Invoke();
     }
 
@@ -71,7 +72,7 @@ public class CardFlipper : MonoBehaviour
         }
 
         // Midpoint reached, no visible side (sprite change happens here)
-        print("MID POINT");
+        Debug.Log("MID POINT", gameObject);
         isFaceDown = !isFaceDown;
         UpdateSprite();
         elapsedTime = 0f;
@@ -86,6 +87,7 @@ public class CardFlipper : MonoBehaviour
         }
 
         transform.rotation = Quaternion.Euler(0, 0, 0);
+        Debug.Log("Rotation Finished", gameObject);
     }
 
     // Used to show/hide the features of the card, called when the card is flipped
