@@ -4,6 +4,12 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
+    private const string MasterVolumeString = "MasterVolume";
+    private const string MusicVolumeString = "MusicVolume";
+    private const string SoundEffectsVolumeString = "SoundEffectsVolume";
+    private const string VoiceLinesVolumeString = "VoiceLinesVolume";
+    private const string FullScreenString = "FullScreen";
+
     // Get the sliders for each volume
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private Slider musicVolumeSlider;
@@ -24,37 +30,37 @@ public class SettingsMenu : MonoBehaviour
     // The following functions set the volume of the audio mixer and save the corresponding value to player prefs
     public void SetMasterVolume(float volume, bool saveToPlayerPrefs = true)
     {
-        audioMixer.SetFloat("MasterVolume", volume);
+        audioMixer.SetFloat(MasterVolumeString, volume);
         if (saveToPlayerPrefs)
         {
-            PlayerPrefs.SetFloat("MasterVolume", volume);
+            PlayerPrefs.SetFloat(MasterVolumeString, volume);
         }
     }
 
     public void SetMusicVolume(float volume, bool saveToPlayerPrefs = true)
     {
-        audioMixer.SetFloat("MusicVolume", volume);
+        audioMixer.SetFloat(MusicVolumeString, volume);
         if (saveToPlayerPrefs)
         {
-            PlayerPrefs.SetFloat("MusicVolume", volume);
+            PlayerPrefs.SetFloat(MusicVolumeString, volume);
         }
     }
 
     public void SetSoundEffectsVolume(float volume, bool saveToPlayerPrefs = true)
     {
-        audioMixer.SetFloat("SoundEffectsVolume", volume);
+        audioMixer.SetFloat(SoundEffectsVolumeString, volume);
         if (saveToPlayerPrefs)
         {
-            PlayerPrefs.SetFloat("SoundEffectsVolume", volume);
+            PlayerPrefs.SetFloat(SoundEffectsVolumeString, volume);
         }
     }
 
     public void SetVoiceLinesVolume(float volume, bool saveToPlayerPrefs = true)
     {
-        audioMixer.SetFloat("VoiceLinesVolume", volume);
+        audioMixer.SetFloat(VoiceLinesVolumeString, volume);
         if (saveToPlayerPrefs)
         {
-            PlayerPrefs.SetFloat("VoiceLinesVolume", volume);
+            PlayerPrefs.SetFloat(VoiceLinesVolumeString, volume);
         }
     }
 
@@ -63,18 +69,18 @@ public class SettingsMenu : MonoBehaviour
         Screen.fullScreen = isFullScreen;
         if (saveToPlayerPrefs)
         {
-            PlayerPrefs.SetInt("FullScreen", isFullScreen ? 1 : 0);
+            PlayerPrefs.SetInt(FullScreenString, isFullScreen ? 1 : 0);
         }
     }
 
     public void LoadSettingsFromPlayerPrefs()
     {
         // Load from player prefs
-        float masterVolume = PlayerPrefs.GetFloat("MasterVolume", 0);
-        float musicVolume = PlayerPrefs.GetFloat("MusicVolume", 0);
-        float soundEffectsVolume = PlayerPrefs.GetFloat("SoundEffectsVolume", 0);
-        float voiceLinesVolume = PlayerPrefs.GetFloat("VoiceLinesVolume", 0);
-        bool isFullScreen = PlayerPrefs.GetInt("FullScreen", 1) == 1;
+        float masterVolume = PlayerPrefs.GetFloat(MasterVolumeString, 0);
+        float musicVolume = PlayerPrefs.GetFloat(MusicVolumeString, 0);
+        float soundEffectsVolume = PlayerPrefs.GetFloat(SoundEffectsVolumeString, 0);
+        float voiceLinesVolume = PlayerPrefs.GetFloat(VoiceLinesVolumeString, 0);
+        bool isFullScreen = PlayerPrefs.GetInt(FullScreenString, 1) == 1;
 
         // Set the sliders to the loaded values
         masterVolumeSlider.value = masterVolume;
