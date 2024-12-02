@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CardFlipper : MonoBehaviour
 {
-    [SerializeField] private GameObject[] frontCardFeatures; // Features of the card's face
-    [SerializeField] private Sprite faceSprite; // Sprite for the face of the card
-    [SerializeField] private Sprite backSprite; // Sprite for the back of the card
-    [SerializeField] private float flipDuration = 0.5f; // Time it takes to flip 180°
-    [SerializeField] private bool isFaceDown = true; // Current state of the card
+    [SerializeField] private GameObject[] frontCardFeatures;
+    [SerializeField] private Sprite faceSprite;
+    [SerializeField] private Sprite backSprite;
+    [SerializeField, Tooltip("Time it takes to flip 180°")] private float flipDuration = 0.5f;
+    [SerializeField, Tooltip("Current state of the card")] private bool isFaceDown = true;
 
     private bool isFlipping = false; // Flag to prevent multiple flips
     private SpriteRenderer spriteRenderer;
@@ -19,13 +19,13 @@ public class CardFlipper : MonoBehaviour
         UpdateSprite(); // Ensure the correct sprite is shown at start
     }
 
-
     private void UpdateSprite()
     {
         spriteRenderer.sprite = isFaceDown ? backSprite : faceSprite;
         ToogleFeatures(!isFaceDown);
     }
 
+    // Setups the card with the given face sprite without any animation
     public void SetCurrentFaceSprite(Sprite faceSprite)
     {
         this.faceSprite = faceSprite;
@@ -61,7 +61,7 @@ public class CardFlipper : MonoBehaviour
     {
         float elapsedTime = 0f;
 
-        // Rotate to 90° (invisible edge)
+        // Rotate from 0° to 90° (to invisible edge)
         while (elapsedTime < flipDuration / 2)
         {
             elapsedTime += Time.deltaTime;
@@ -71,12 +71,12 @@ public class CardFlipper : MonoBehaviour
         }
 
         // Midpoint reached, no visible side (sprite change happens here)
-        isFaceDown = !isFaceDown; // Toggle the card state
+        print("MID POINT");
+        isFaceDown = !isFaceDown;
         UpdateSprite();
         elapsedTime = 0f;
-        print("MID POINT");
 
-        // Rotate back to 180° (visible side)
+        // Rotate back from 90° to 0° (to facing the player)
         while (elapsedTime < flipDuration / 2)
         {
             elapsedTime += Time.deltaTime;
@@ -85,10 +85,10 @@ public class CardFlipper : MonoBehaviour
             yield return null;
         }
 
-        // Ensure the final rotation is correct
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
+    // Used to show/hide the features of the card, called when the card is flipped
     private void ToogleFeatures(bool show)
     {
         foreach (GameObject feature in frontCardFeatures)

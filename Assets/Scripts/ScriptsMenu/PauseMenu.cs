@@ -4,13 +4,14 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
-    public GameObject pauseMenuUI;
+
+    [SerializeField]
+    private GameObject pauseMenuUI;
 
     private bool isInputLocked = false; 
 
-    void Update()
+    private void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.Escape) && !isInputLocked)
         {
             isInputLocked = true; 
@@ -26,11 +27,8 @@ public class PauseMenu : MonoBehaviour
                 Debug.Log("Game is not paused, pausing...");
                 Paused();
             }
-
-            
-            Invoke("UnlockInput", 0.2f); 
+            Invoke(nameof(UnlockInput), 0.2f);
         }
-
     }
 
     private void UnlockInput()

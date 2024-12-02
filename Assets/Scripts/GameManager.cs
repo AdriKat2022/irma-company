@@ -1,4 +1,3 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +11,6 @@ public class GameManager : MonoBehaviour
     private int currentCaracterCount;
     private int maxCaracterCount;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         maxCaracterCount = customerDataList.Length;
@@ -20,6 +18,7 @@ public class GameManager : MonoBehaviour
         currentCaracterCount++;
     }
 
+    // Called by the EncounterManager when the encounter ends
     public void OnEndEncounter()
     {
         if (currentCaracterCount < maxCaracterCount)
