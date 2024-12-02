@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuReturnTemp : MonoBehaviour
+public class MainMenuReturn : MonoBehaviour
 {
     public string LevelToLoad;
 
