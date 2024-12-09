@@ -1,98 +1,84 @@
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
-public class SettingsMenu : MonoBehaviour
+public class SettingsManager : MonoBehaviour
 {
-    private const string MasterVolumeString = "MasterVolume";
-    private const string MusicVolumeString = "MusicVolume";
-    private const string SoundEffectsVolumeString = "SoundEffectsVolume";
-    private const string VoiceLinesVolumeString = "VoiceLinesVolume";
-    private const string FullScreenString = "FullScreen";
+    [Header("UI Elements")]
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider musicSlider;
+    [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Slider voiceSlider;
+    [SerializeField] private Toggle fullscreenToggle;
 
-    // Get the sliders for each volume
-    [SerializeField] private Slider masterVolumeSlider;
-    [SerializeField] private Slider musicVolumeSlider;
-    [SerializeField] private Slider soundEffectsVolumeSlider;
-    [SerializeField] private Slider voiceLinesVolumeSlider;
-
-    [Space]
-
+    [Header("Audio Mixer")]
     [SerializeField] private AudioMixer audioMixer;
 
-    // On awake, load all the settings (master, music, sfx, voiceLines, fullscreen) and disable the game object (the settings menu is never shown first)
-    private void Awake()
+    // PlayerPrefs and Mixer keys
+    private const string MasterVolumeKey = "MasterVolume";
+    private const string MusicVolumeKey = "MusicVolume";
+    private const string SFXVolumeKey = "SoundEffectsVolume";
+    private const string VoiceVolumeKey = "VoiceLinesVolume";
+    private const string FullscreenKey = "Fullscreen";
+
+    private void Start()
     {
-        LoadSettingsFromPlayerPrefs();
+        // Load settings
+        masterSlider.value = PlayerPrefs.GetFloat(MasterVolumeKey, 0.75f); // Default value 0.75
+        musicSlider.value = PlayerPrefs.GetFloat(MusicVolumeKey, 0.75f);
+        sfxSlider.value = PlayerPrefs.GetFloat(SFXVolumeKey, 0.75f);
+        voiceSlider.value = PlayerPrefs.GetFloat(VoiceVolumeKey, 0.75f);
+        fullscreenToggle.isOn = PlayerPrefs.GetInt(FullscreenKey, 1) == 1; // Default fullscreen enabled
+
+        // Apply loaded settings
+        ApplySettings();
+
+        // Add listeners
+        masterSlider.onValueChanged.AddListener(value => SetVolume(MasterVolumeKey, value));
+        musicSlider.onValueChanged.AddListener(value => SetVolume(MusicVolumeKey, value));
+        sfxSlider.onValueChanged.AddListener(value => SetVolume(SFXVolumeKey, value));
+        voiceSlider.onValueChanged.AddListener(value => SetVolume(VoiceVolumeKey, value));
+        fullscreenToggle.onValueChanged.AddListener(SetFullscreen);
+
         gameObject.SetActive(false);
     }
 
-    // The following functions set the volume of the audio mixer and save the corresponding value to player prefs
-    public void SetMasterVolume(float volume, bool saveToPlayerPrefs = true)
+    private void SetVolume(string parameterName, float value)
     {
-        audioMixer.SetFloat(MasterVolumeString, volume);
-        if (saveToPlayerPrefs)
+        // Safeguard for very small or zero values
+        if (value <= 0.001f)
         {
-            PlayerPrefs.SetFloat(MasterVolumeString, volume);
+            audioMixer.SetFloat(parameterName, -80f);
         }
+        else
+        {
+            audioMixer.SetFloat(parameterName, Mathf.Log10(value) * 20);
+        }
+        SaveSettings();
     }
 
-    public void SetMusicVolume(float volume, bool saveToPlayerPrefs = true)
+    private void SetFullscreen(bool isFullscreen)
     {
-        audioMixer.SetFloat(MusicVolumeString, volume);
-        if (saveToPlayerPrefs)
-        {
-            PlayerPrefs.SetFloat(MusicVolumeString, volume);
-        }
+        Screen.fullScreen = isFullscreen;
+        PlayerPrefs.SetInt(FullscreenKey, isFullscreen ? 1 : 0);
+        PlayerPrefs.Save();
     }
 
-    public void SetSoundEffectsVolume(float volume, bool saveToPlayerPrefs = true)
+    private void SaveSettings()
     {
-        audioMixer.SetFloat(SoundEffectsVolumeString, volume);
-        if (saveToPlayerPrefs)
-        {
-            PlayerPrefs.SetFloat(SoundEffectsVolumeString, volume);
-        }
+        PlayerPrefs.SetFloat(MasterVolumeKey, masterSlider.value);
+        PlayerPrefs.SetFloat(MusicVolumeKey, musicSlider.value);
+        PlayerPrefs.SetFloat(SFXVolumeKey, sfxSlider.value);
+        PlayerPrefs.SetFloat(VoiceVolumeKey, voiceSlider.value);
+        PlayerPrefs.Save();
     }
 
-    public void SetVoiceLinesVolume(float volume, bool saveToPlayerPrefs = true)
+    private void ApplySettings()
     {
-        audioMixer.SetFloat(VoiceLinesVolumeString, volume);
-        if (saveToPlayerPrefs)
-        {
-            PlayerPrefs.SetFloat(VoiceLinesVolumeString, volume);
-        }
-    }
-
-    public void SetFullScreen(bool isFullScreen, bool saveToPlayerPrefs = true)
-    {
-        Screen.fullScreen = isFullScreen;
-        if (saveToPlayerPrefs)
-        {
-            PlayerPrefs.SetInt(FullScreenString, isFullScreen ? 1 : 0);
-        }
-    }
-
-    public void LoadSettingsFromPlayerPrefs()
-    {
-        // Load from player prefs
-        float masterVolume = PlayerPrefs.GetFloat(MasterVolumeString, 0);
-        float musicVolume = PlayerPrefs.GetFloat(MusicVolumeString, 0);
-        float soundEffectsVolume = PlayerPrefs.GetFloat(SoundEffectsVolumeString, 0);
-        float voiceLinesVolume = PlayerPrefs.GetFloat(VoiceLinesVolumeString, 0);
-        bool isFullScreen = PlayerPrefs.GetInt(FullScreenString, 1) == 1;
-
-        // Set the sliders to the loaded values
-        masterVolumeSlider.value = masterVolume;
-        musicVolumeSlider.value = musicVolume;
-        soundEffectsVolumeSlider.value = soundEffectsVolume;
-        voiceLinesVolumeSlider.value = voiceLinesVolume;
-
-        // Set the audio mixer to the loaded values
-        SetMasterVolume(masterVolume, false);
-        SetMusicVolume(musicVolume, false);
-        SetSoundEffectsVolume(soundEffectsVolume, false);
-        SetVoiceLinesVolume(voiceLinesVolume, false);
-        SetFullScreen(isFullScreen, false);
+        audioMixer.SetFloat(MasterVolumeKey, Mathf.Log10(masterSlider.value) * 20);
+        audioMixer.SetFloat(MusicVolumeKey, Mathf.Log10(musicSlider.value) * 20);
+        audioMixer.SetFloat(SFXVolumeKey, Mathf.Log10(sfxSlider.value) * 20);
+        audioMixer.SetFloat(VoiceVolumeKey, Mathf.Log10(voiceSlider.value) * 20);
+        Screen.fullScreen = fullscreenToggle.isOn;
     }
 }
