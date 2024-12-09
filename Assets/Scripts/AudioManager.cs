@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -24,6 +25,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip pauseClickSound;
     public AudioClip divinationBeginSound;
 
+    private AudioClip lastVoice;
+    private bool isVoiceFinished = true;
 
     private void Awake()
     {
@@ -73,6 +76,8 @@ public class AudioManager : MonoBehaviour
             voiceSource.clip = clip;
             voiceSource.volume = volume;
             voiceSource.Play();
+            lastVoice = clip;
+            isVoiceFinished = false;
         }
         else
         {
@@ -88,7 +93,19 @@ public class AudioManager : MonoBehaviour
 
     public void TooglePauseVoice(bool play)
     {
-        if (!play) voiceSource.Pause();
-        else voiceSource.Play();
+        if (!play)
+        {
+            voiceSource.Pause();
+        }
+        else if (!isVoiceFinished)
+        {
+            voiceSource.Play();
+        }
+    }
+
+    private IEnumerator StopVoice(AudioClip lastVoiceClip)
+    {
+        yield return new WaitForSeconds(lastVoiceClip.length);
+        if (lastVoice == lastVoiceClip) isVoiceFinished = true;
     }
 }

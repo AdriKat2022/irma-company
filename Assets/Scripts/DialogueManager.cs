@@ -6,7 +6,14 @@ using System;
 
 public class DialogueManager : MonoBehaviour
 {
+    private const string OpenAnimatorKey = "open";
+    private const string CLoseAnimatorKey = "close";
+
+
     [SerializeField] private string playerName = "Player";
+    
+    [Header("Animation")]
+    [SerializeField] private float WrittingCharDelay = 0.05f;
 
     [SerializeField] private CustomerData customerData;
     private Dialogue dialogue;
@@ -22,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI characterNameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator animator;
+
 
     void Start()
     {
@@ -66,8 +74,6 @@ public class DialogueManager : MonoBehaviour
 
         isDialogueActive = true;
 
-        animator.SetBool("isOpen", true);
-
         foreach (DialogueWave dialogueWave in dialogue.DialogueWaves) 
         { 
             foreach (DialogueLine dialogueLine in dialogueWave.Lines)
@@ -79,12 +85,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        StartCoroutine(OpenDialogue(onDialogueComplete));
-    }
-
-    IEnumerator OpenDialogue(Action onDialogueComplete = null)
-    {
-        yield return new WaitForSeconds(1.5f);
+        animator.SetTrigger(OpenAnimatorKey);
         DisplayNextSentence(onDialogueComplete);
     }
 
@@ -114,7 +115,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(WrittingCharDelay);
         }
 
         yield return new WaitForSeconds(nextLineDelay);
@@ -130,7 +131,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue(Action onDialogueComplete = null)
     {
         dialogueText.text = "";
-        animator.SetBool("isOpen", false);
+        animator.SetTrigger(CLoseAnimatorKey);
         isDialogueActive = false;
         onDialogueComplete?.Invoke();
     }
